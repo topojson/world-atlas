@@ -1,6 +1,6 @@
 # World Atlas TopoJSON
 
-This repository provides a convenient mechanism for generating TopoJSON files from [National Earth](http://naturalearthdata.com/).
+This repository provides a convenient mechanism for generating TopoJSON files from [Natural Earth](http://naturalearthdata.com/).
 
 ## Installing via Homebrew
 
@@ -26,6 +26,6 @@ Once you have everything installed, simply run:
 make
 ```
 
-This will generate various TopoJSON files in the `topo` directory. As a by-product of producing these files, you’ll also download the shapefiles directly from National Earth and convert them into GeoJSON and filter.
+This will generate various TopoJSON files in the `topo` directory. As a by-product of producing these files, you’ll also download the shapefiles directly from Natural Earth and convert them into GeoJSON and filter.
 
 If you want to generate a custom map, I recommend modifying the Makefile. Or, just use the Makefile as a set of examples, and run the appropriate `ogr2ogr` and `topojson` commands from the terminal.
