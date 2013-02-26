@@ -72,7 +72,7 @@ topo/ne_%_us_states_lakes.json: geo/ne_%_us_states_lakes.json
 	mkdir -p $(dir $@) && $(TOPOJSON) -q 1e5 --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
 
 topo/world-%.json: shp/ne_%_land.shp shp/ne_%_admin_0_countries.shp
-	mkdir -p $(dir $@) && $(TOPOJSON) -q 1e5 --id-property=+iso_n3 -o $@ -- land=shp/ne_$*_land.shp countries=shp/ne_$*_admin_0_countries.shp
+	mkdir -p $(dir $@) && $(TOPOJSON) -q 1e5 --id-property=+iso_n3 -- land=shp/ne_$*_land.shp countries=shp/ne_$*_admin_0_countries.shp | ./topomerge land > $@
 
 topo/%.json: shp/%.shp
 	mkdir -p $(dir $@) && $(TOPOJSON) --id-property=iso_a2 -o $@ -- $<
