@@ -60,7 +60,7 @@ shp/ne_%_admin_1_states_provinces_lakes.shp: zip/ne_%_admin_1_states_provinces_l
 	touch $@
 
 geo/ne_%_us_states.json: shp/ne_%_admin_1_states_provinces.shp
-	rm -f $@ && ogr2ogr -f 'GeoJSON' -where "iso_a2 = ('US')" $@ $<
+	mkdir -p $(dir $@) && rm -f $@ && ogr2ogr -f 'GeoJSON' -where "iso_a2 = ('US')" $@ $<
 
 topo/ne_%_us_states.json: geo/ne_%_us_states.json
 	mkdir -p $(dir $@) && $(TOPOJSON) -q 1e5 --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
