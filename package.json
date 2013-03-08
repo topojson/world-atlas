@@ -16,6 +16,6 @@
     "url": "http://github.com/mbostock/world-atlas.git"
   },
   "devDependencies": {
-    "topojson": ">= 0.0.15"
+    "topojson": "~0.0.27"
   }
 }

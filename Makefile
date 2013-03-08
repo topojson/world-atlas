@@ -1,4 +1,4 @@
-TOPOJSON = ./node_modules/topojson/bin/topojson
+TOPOJSON = node_modules/.bin/topojson
 
 COLLECTIONS = \
 	ne_10m_admin_0_countries \
