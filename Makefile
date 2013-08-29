@@ -1,4 +1,4 @@
-TOPOJSON = node_modules/.bin/topojson
+TOPOJSON = node_modules/.bin/topojson -q 1e5
 
 COLLECTIONS = \
 	ne_10m_admin_0_countries \
@@ -86,7 +86,7 @@ geo/ne_%_us_states.json: shp/ne_%_admin_1_states_provinces.shp
 
 topo/ne_%_us_states.json: geo/ne_%_us_states.json
 	mkdir -p $(dir $@)
-	$(TOPOJSON) -q 1e5 --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
+	$(TOPOJSON) --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
 
 geo/ne_%_us_states_lakes.json: shp/ne_%_admin_1_states_provinces_lakes.shp
 	rm -f $@
@@ -94,12 +94,12 @@ geo/ne_%_us_states_lakes.json: shp/ne_%_admin_1_states_provinces_lakes.shp
 
 topo/ne_%_us_states_lakes.json: geo/ne_%_us_states_lakes.json
 	mkdir -p $(dir $@)
-	$(TOPOJSON) -q 1e5 --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
+	$(TOPOJSON) --id-property=postal -p name -s 7e-7 -o $@ -- states=$<
 
 topo/world-%.json: shp/ne_%_land.shp shp/ne_%_admin_0_countries.shp
 	mkdir -p $(dir $@)
-	$(TOPOJSON) -q 1e5 --id-property=+iso_n3 -- land=shp/ne_$*_land.shp countries=shp/ne_$*_admin_0_countries.shp | ./topomerge land > $@
+	$(TOPOJSON) --id-property=+iso_n3 -- land=shp/ne_$*_land.shp countries=shp/ne_$*_admin_0_countries.shp | ./topomerge land > $@
 
 topo/%.json: shp/%.shp
 	mkdir -p $(dir $@)
-	$(TOPOJSON) -q 1e5 --id-property=iso_a2 -o $@ -- $<
+	$(TOPOJSON) --id-property=iso_a2 -o $@ -- $<
