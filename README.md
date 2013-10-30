@@ -4,10 +4,10 @@ This repository provides a convenient mechanism for generating TopoJSON files fr
 
 ## Installing via Homebrew
 
-Before you can run `make`, you’ll need to install Node.js. Here’s how to do that using [Homebrew](http://mxcl.github.com/homebrew/) on Mac OS X:
+Before you can run `make`, you’ll need to install Node.js and `ogr2ogr`. Here’s how to do that using [Homebrew](http://mxcl.github.com/homebrew/) on Mac OS X:
 
 ```bash
-brew install node
+brew install node gdal
 ```
 
 And then, from this repository’s root directory, install the dependencies:
