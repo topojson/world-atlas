@@ -72,8 +72,7 @@ shp/ne_%_admin_1_states_provinces_lakes.shp: zip/ne_%_admin_1_states_provinces_l
 topo/world-%.json: shp/ne_%_admin_0_countries.shp
 	mkdir -p $(dir $@)
 	$(TOPOJSON) \
-		--no-pre-quantization \
-		--post-quantization 1e5 \
+		--quantization 1e5 \
 		--id-property=+iso_n3 \
 		-- countries=shp/ne_$*_admin_0_countries.shp \
 		| $(TOPOMERGE) \
