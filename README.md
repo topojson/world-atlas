@@ -44,4 +44,4 @@ Admin 0 country boundaries at 1:50,000,000 scale.
 
 Admin 0 country boundaries at 1:110,000,000 scale.
 
-If you want to generate a custom map, I recommend modifying the Makefile. Or, just use the Makefile as a set of examples, and run the appropriate `ogr2ogr` and `topojson` commands from the terminal. Or checkout [this repository](https://github.com/melalj/topojson-map-generator)) that provides a Bash version of the Makefile with more customizable parameters and pre-projected maps.
+If you want to generate a custom map, I recommend modifying the Makefile. Or, just use the Makefile as a set of examples, and run the appropriate `ogr2ogr` and `topojson` commands from the terminal. Or checkout [this repository](https://github.com/melalj/topojson-map-generator) that provides a Bash version of the Makefile with more customizable parameters and pre-projected maps.
