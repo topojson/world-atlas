@@ -14,3 +14,15 @@ europe-50m: shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp
 			--io=countries \
 			--oo=land \
 			--no-key
+
+nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
+	mkdir -p topo
+	$(TOPOJSON) \
+		--quantization 1e5 \
+		--id-property=+iso_n3 \
+		-- countries=shp/nielsen-dma/nielsen-dma.shp \
+		| $(TOPOMERGE) \
+			-o topo/nielsen-dma.json \
+			--io=countries \
+			--oo=land \
+			--no-key

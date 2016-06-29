@@ -1,3 +1,9 @@
+# Source for Nielsen DMA shapes:
+
+https://www.google.com/fusiontables/DataSource?docid=1UTzElFkEtTpyuUun_6W94cn8UtlZYgXAQwahNYc
+
+Download as KML, convert to shp, shp to topojson
+
 # World Atlas TopoJSON
 
 This repository provides a convenient mechanism for generating TopoJSON files from [Natural Earth](http://naturalearthdata.com/).
