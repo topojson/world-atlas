@@ -26,3 +26,15 @@ nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
 			--io=countries \
 			--oo=land \
 			--no-key
+
+usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
+	mkdir -p topo
+	$(TOPOJSON) \
+		--quantization 1e5 \
+		--id-property=+iso_n3 \
+		-- countries=shp/usa-states-50m/usa-states-50m.shp \
+		| $(TOPOMERGE) \
+			-o topo/usa-states-50m.json \
+			--io=countries \
+			--oo=land \
+			--no-key
