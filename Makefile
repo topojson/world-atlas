@@ -8,6 +8,7 @@ europe-50m: shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp
 	$(TOPOJSON) \
 		--quantization 1e5 \
 		--id-property=+iso_n3 \
+		-p name \
 		-- countries=shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp \
 		| $(TOPOMERGE) \
 			-o topo/europe-50m.json \
