@@ -21,10 +21,10 @@ nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
 		--quantization 1e5 \
 		--id-property=id \
 		-p name \
-		-- nielsen-dmas=shp/nielsen-dma/nielsen-dma.shp \
+		-- dmas=shp/nielsen-dma/nielsen-dma.shp \
 		| $(TOPOMERGE) \
 			-o topo/nielsen-dma.json \
-			--io=nielsen-dmas \
+			--io=dmas \
 			--oo=land \
 			--no-key
 
@@ -34,9 +34,9 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 		--quantization 1e5 \
 		--id-property=iso_3166_2 \
 		-p name \
-		-- usa_states=shp/usa-states-50m/usa-states-50m.shp \
+		-- states=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
 			-o topo/usa-states-50m.json
-			--io=usa_states \
+			--io=states \
 			--oo=land \
 			--no-key 
