@@ -36,7 +36,7 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 		-p name \
 		-- states=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
-			-o topo/usa-states-50m.json
+			-o topo/usa-states-50m.json \
 			--io=states \
 			--oo=land \
 			--no-key 

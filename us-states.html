@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Map of US States</title>
+<style>
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5;
+  stroke-opacity: .7;
+}
+
+#borders {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#textbox {
+  position: absolute;
+  top: 400px;
+  left: 50px;
+  width: 275px;
+  height: 100px;
+}
+
+#textbox text p {
+  font-family: Arial, Helvetica;
+  font-size: .8em;
+  margin: 0;
+}
+
+</style>
+</head>
+<body>
+<div id="textbox"></div>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+var width = 960,
+    height = 500;
+// sets the type of view
+var projection = d3.geo.albersUsa()
+    .scale(1070) // size, bigger is bigger
+    .translate([width / 2, height / 2]);
+
+//creates a new geographic path generator
+var path = d3.geo.path().projection(projection);
+var xScale = d3.scale.linear()
+    .domain([0, 7])
+    .range([0, 500]);
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickSize(13)
+    .tickFormat(d3.format("0.0f"));
+
+
+//set svg window
+var svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+
+var graticule = d3.geo.graticule()
+    .extent([[-98 - 45, 38 - 45], [-98 + 45, 38 + 45]])
+    .step([5, 5]);
+
+// adding a blank background
+svg.append("rect")
+    .datum(graticule)
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+   // .on("click", clicked);
+
+//declare g as our appended svg
+var g = svg.append("g");
+
+var defaultFill = "#aaa";
+
+d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/930da2d140f5f2aefccac04ef94fc1c8e7f4d677/topo/usa-states-50m.json", function(error, topoData) {
+  g.append("g")
+    .attr("id", "dmas")
+    .selectAll("path")
+    .data(topojson.feature(topoData, topoData.objects.usa_states).features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    //.on("click", clicked)
+    
+    .on("mouseover", function(d){
+      d3.select(this)
+      .attr("fill", "orange");
+
+      console.log(d);
+
+      d3.select("#textbox")
+        .html("")
+        .append("text")
+        .html(string)
+    })
+
+    .on("mouseout", function(d){
+      d3.select(this)
+      .attr("fill", defaultFill)
+    })
+    
+    .attr("opacity", 0.9)
+    .attr("fill", defaultFill);
+})
+
+// via http://stackoverflow.com/a/2901298
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+</script>
+</body>
+</html>
