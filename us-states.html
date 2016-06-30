@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Map of US States</title>
+<title>US State Map</title>
 <style>
 .background {
   fill: none;
@@ -27,7 +27,7 @@
 
 #textbox {
   position: absolute;
-  top: 400px;
+  top: 600px;
   left: 50px;
   width: 275px;
   height: 100px;
@@ -50,7 +50,7 @@ var width = 960,
     height = 500;
 // sets the type of view
 var projection = d3.geo.albersUsa()
-    .scale(1070) // size, bigger is bigger
+    .scale(1070)
     .translate([width / 2, height / 2]);
 
 //creates a new geographic path generator
@@ -82,18 +82,17 @@ svg.append("rect")
     .attr("class", "background")
     .attr("width", width)
     .attr("height", height)
-   // .on("click", clicked);
 
 //declare g as our appended svg
 var g = svg.append("g");
 
 var defaultFill = "#aaa";
 
-d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/930da2d140f5f2aefccac04ef94fc1c8e7f4d677/topo/usa-states-50m.json", function(error, topoData) {
+d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/master/topo/usa-states-50m.json", function(error, topoData) {
   g.append("g")
-    .attr("id", "dmas")
+    .attr("id", "states")
     .selectAll("path")
-    .data(topojson.feature(topoData, topoData.objects.usa_states).features)
+    .data(topojson.feature(topoData, topoData.objects.states).features)
     .enter()
     .append("path")
     .attr("d", path)
@@ -103,7 +102,8 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/930da2d140f5f2ae
       d3.select(this)
       .attr("fill", "orange");
 
-      console.log(d);
+      var string = "<p><strong>State Name</strong>: " + d.properties.name + "</p>";
+      string += "<p><strong>State Code</strong>: " + d.id + "</p>";
 
       d3.select("#textbox")
         .html("")
@@ -118,12 +118,15 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/930da2d140f5f2ae
     
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
-})
 
-// via http://stackoverflow.com/a/2901298
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  // add dma borders
+  g.append("path", ".graticule")
+      .datum(topojson.mesh(topoData, topoData.objects.states, function(a, b) { 
+        return true;
+      }))
+      .attr("id", "borders")
+      .attr("d", path);
+})
 
 </script>
 </body>
