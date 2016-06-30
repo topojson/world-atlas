@@ -7,7 +7,7 @@ europe-50m: shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp
 	mkdir -p topo
 	$(TOPOJSON) \
 		--quantization 1e5 \
-		--id-property=+iso_n3 \
+		--id-property=iso_a3 \
 		-p name \
 		-- countries=shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp \
 		| $(TOPOMERGE) \
