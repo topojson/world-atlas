@@ -31,10 +31,11 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 	mkdir -p topo
 	$(TOPOJSON) \
 		--quantization 1e5 \
-		--id-property=+iso_n3 \
-		-- countries=shp/usa-states-50m/usa-states-50m.shp \
+		--id-property=iso_3166_2 \
+		-p name \
+		-- usa_states=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
-			-o topo/usa-states-50m.json \
-			--io=countries \
+			--io=usa_states \
 			--oo=land \
-			--no-key
+			--no-key \
+			| python -mjson.tool > topo/usa-states-50m.json
