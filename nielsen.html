@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DMA Map</title>
+<style>
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5;
+  stroke-opacity: .7;
+}
+
+#borders {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#textbox {
+  position: absolute;
+  top: 400px;
+  left: 50px;
+  width: 275px;
+  height: 100px;
+}
+
+#textbox text p {
+  font-family: Arial, Helvetica;
+  font-size: .8em;
+  margin: 0;
+}
+
+</style>
+</head>
+<body>
+<div id="textbox"></div>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+var width = 960,
+    height = 500;
+// sets the type of view
+var projection = d3.geo.albersUsa()
+    .scale(1070)
+    .translate([width / 2, height / 2]);
+
+//creates a new geographic path generator
+var path = d3.geo.path().projection(projection);
+var xScale = d3.scale.linear()
+    .domain([0, 7])
+    .range([0, 500]);
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+    .tickSize(13)
+    .tickFormat(d3.format("0.0f"));
+
+
+//set svg window
+var svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+
+var graticule = d3.geo.graticule()
+    .extent([[-98 - 45, 38 - 45], [-98 + 45, 38 + 45]])
+    .step([5, 5]);
+
+// adding a blank background
+svg.append("rect")
+    .datum(graticule)
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+
+//declare g as our appended svg
+var g = svg.append("g");
+
+var defaultFill = "#aaa";
+
+d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/3561b5f2dca6844e7b97811d8d9e0b7dd051634f/topo/nielsen-dma.json", function(error, topoData) {
+  g.append("g")
+    .attr("id", "dmas")
+    .selectAll("path")
+    .data(topojson.feature(topoData, topoData.objects.nielsen_dma).features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    //.on("click", clicked)
+    
+    .on("mouseover", function(d){
+      d3.select(this)
+      .attr("fill", "orange");
+
+      var string = "<p><strong>DMA Name</strong>: " + d.properties.dma_name + "</p>";
+      string += "<p><strong>DMA Code</strong>: " + d.id + "</p>";
+
+      d3.select("#textbox")
+        .html("")
+        .append("text")
+        .html(string)
+    })
+
+    .on("mouseout", function(d){
+      d3.select(this)
+      .attr("fill", defaultFill)
+    })
+    
+    .attr("opacity", 0.9)
+    .attr("fill", defaultFill);
+
+  // add dma borders
+  g.append("path", ".graticule")
+      .datum(topojson.mesh(topoData, topoData.objects.nielsen_dma, function(a, b) { 
+        return true;
+      }))
+      .attr("id", "borders")
+      .attr("d", path);
+})
+
+</script>
+</body>
+</html>

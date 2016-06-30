@@ -19,11 +19,12 @@ nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
 	mkdir -p topo
 	$(TOPOJSON) \
 		--quantization 1e5 \
-		--id-property=+iso_n3 \
-		-- countries=shp/nielsen-dma/nielsen-dma.shp \
+		--id-property=id \
+		-p name \
+		-- nielsen-dmas=shp/nielsen-dma/nielsen-dma.shp \
 		| $(TOPOMERGE) \
 			-o topo/nielsen-dma.json \
-			--io=countries \
+			--io=nielsen-dmas \
 			--oo=land \
 			--no-key
 
@@ -35,7 +36,7 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 		-p name \
 		-- usa_states=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
+			-o topo/usa-states-50m.json
 			--io=usa_states \
 			--oo=land \
-			--no-key \
-			| python -mjson.tool > topo/usa-states-50m.json
+			--no-key 
