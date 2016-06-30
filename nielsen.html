@@ -88,11 +88,11 @@ var g = svg.append("g");
 
 var defaultFill = "#aaa";
 
-d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/3561b5f2dca6844e7b97811d8d9e0b7dd051634f/topo/nielsen-dma.json", function(error, topoData) {
+d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/master/topo/nielsen-dma.json", function(error, topoData) {
   g.append("g")
     .attr("id", "dmas")
     .selectAll("path")
-    .data(topojson.feature(topoData, topoData.objects.nielsen_dma).features)
+    .data(topojson.feature(topoData, topoData.objects.dmas).features)
     .enter()
     .append("path")
     .attr("d", path)
@@ -102,7 +102,7 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/3561b5f2dca6844e
       d3.select(this)
       .attr("fill", "orange");
 
-      var string = "<p><strong>DMA Name</strong>: " + d.properties.dma_name + "</p>";
+      var string = "<p><strong>DMA Name</strong>: " + d.properties.name + "</p>";
       string += "<p><strong>DMA Code</strong>: " + d.id + "</p>";
 
       d3.select("#textbox")
@@ -121,7 +121,7 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/3561b5f2dca6844e
 
   // add dma borders
   g.append("path", ".graticule")
-      .datum(topojson.mesh(topoData, topoData.objects.nielsen_dma, function(a, b) { 
+      .datum(topojson.mesh(topoData, topoData.objects.dmas, function(a, b) { 
         return true;
       }))
       .attr("id", "borders")
