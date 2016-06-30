@@ -3,6 +3,19 @@ TOPOMERGE = node_modules/.bin/topojson-merge
 
 all:
 
+world-50m: shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp
+	mkdir -p topo
+	$(TOPOJSON) \
+		--quantization 1e5 \
+		--id-property=iso_a3 \
+		-p name,continent \
+		-- countries=shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp \
+		| $(TOPOMERGE) \
+			-o topo/world-50m.json \
+			--io=countries \
+			--oo=land \
+			--no-key
+
 europe-50m: shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp
 	mkdir -p topo
 	$(TOPOJSON) \
