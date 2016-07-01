@@ -47,7 +47,7 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 	$(TOPOJSON) \
 		--quantization 1e5 \
 		--id-property=iso_3166_2 \
-		-p name \
+		-p name,country,region \
 		-- states=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
 			-o topo/usa-states-50m.json \
