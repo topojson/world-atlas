@@ -27,8 +27,8 @@
 
 #textbox {
   position: absolute;
-  top: 600px;
-  left: 50px;
+  top: 510px;
+  left: 25px;
   width: 275px;
   height: 100px;
 }
@@ -45,40 +45,28 @@
 <div id="textbox"></div>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
 <script>
 var width = 960,
     height = 500;
 // sets the type of view
 var projection = d3.geo.albersUsa()
-    .scale(1070)
-    .translate([width / 2, height / 2]);
+    .translate([0, 0])
+    .scale(1);
 
 //creates a new geographic path generator
 var path = d3.geo.path().projection(projection);
-var xScale = d3.scale.linear()
-    .domain([0, 7])
-    .range([0, 500]);
-
-var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .orient("bottom")
-    .tickSize(13)
-    .tickFormat(d3.format("0.0f"));
-
 
 //set svg window
 var svg = d3.select("body")
       .append("svg")
       .attr("width", width)
       .attr("height", height)
-
-var graticule = d3.geo.graticule()
-    .extent([[-98 - 45, 38 - 45], [-98 + 45, 38 + 45]])
-    .step([5, 5]);
+      .attr("stroke", "black")
+      .attr("stroke-width", 0.7);
 
 // adding a blank background
 svg.append("rect")
-    .datum(graticule)
     .attr("class", "background")
     .attr("width", width)
     .attr("height", height)
@@ -89,18 +77,44 @@ var g = svg.append("g");
 var defaultFill = "#aaa";
 
 d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/master/topo/usa-states-50m.json", function(error, topoData) {
+  var features = topojson.feature(topoData, topoData.objects.states).features;
+  var featureBounds = _.map(features, function(feature) {
+      return path.bounds(feature);
+  });
+
+  var upperLeftX = _.chain(featureBounds).map(function(bounds) {
+    return bounds[0][0];
+  }).min().value();
+
+  var upperLeftY = _.chain(featureBounds).map(function(bounds) {
+    return bounds[0][1];
+  }).min().value();
+
+  var lowerRightX = _.chain(featureBounds).map(function(bounds) {
+    return bounds[1][0];
+  }).max().value();
+
+  var lowerRightY = _.chain(featureBounds).map(function(bounds) {
+    return bounds[1][1];
+  }).max().value();
+
+  var s = .95 / Math.max((lowerRightX - upperLeftX) / width, (lowerRightY - upperLeftY) / height);
+  projection.scale(s);
+
+  var t = [(width - s * (lowerRightX + upperLeftX)) / 2, (height - s * (lowerRightY + upperLeftY)) / 2];
+  projection.translate(t);
+
   g.append("g")
     .attr("id", "states")
     .selectAll("path")
-    .data(topojson.feature(topoData, topoData.objects.states).features)
+    .data(features)
     .enter()
     .append("path")
     .attr("d", path)
-    //.on("click", clicked)
     
     .on("mouseover", function(d){
       d3.select(this)
-      .attr("fill", "orange");
+        .attr("fill", "orange");
 
       var string = "<p><strong>State Name</strong>: " + d.properties.name + "</p>";
       string += "<p><strong>State Code</strong>: " + d.id + "</p>";
@@ -108,18 +122,19 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/master/topo/usa-
       d3.select("#textbox")
         .html("")
         .append("text")
-        .html(string)
+        .html(string);
     })
 
     .on("mouseout", function(d){
       d3.select(this)
       .attr("fill", defaultFill)
+      d3.select("#textbox")
+        .html("");
     })
     
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
 
-  // add dma borders
   g.append("path", ".graticule")
       .datum(topojson.mesh(topoData, topoData.objects.states, function(a, b) { 
         return true;

@@ -27,8 +27,8 @@
 
 #textbox {
   position: absolute;
-  top: 400px;
-  left: 50px;
+  top: 510px;
+  left: 25px;
   width: 275px;
   height: 100px;
 }
@@ -80,35 +80,23 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2
   var features = topojson.feature(topoData, topoData.objects.countries).features;
   var featureBounds = _.map(features, function(feature) {
       return path.bounds(feature);
-    });
+  });
 
-  var upperLeftX = _.chain(featureBounds)
-    .map(function(bounds) {
-      return bounds[0][0];
-    })
-    .min()
-    .value();
+  var upperLeftX = _.chain(featureBounds).map(function(bounds) {
+    return bounds[0][0];
+  }).min().value();
 
-  var upperLeftY = _.chain(featureBounds)
-    .map(function(bounds) {
-      return bounds[0][1];
-    })
-    .min()
-    .value();
+  var upperLeftY = _.chain(featureBounds).map(function(bounds) {
+    return bounds[0][1];
+  }).min().value();
 
-  var lowerRightX = _.chain(featureBounds)
-    .map(function(bounds) {
-      return bounds[1][0];
-    })
-    .max()
-    .value();
+  var lowerRightX = _.chain(featureBounds).map(function(bounds) {
+    return bounds[1][0];
+  }).max().value();
 
-  var lowerRightY = _.chain(featureBounds)
-    .map(function(bounds) {
-      return bounds[1][1];
-    })
-    .max()
-    .value();
+  var lowerRightY = _.chain(featureBounds).map(function(bounds) {
+    return bounds[1][1];
+  }).max().value();
 
   var s = .95 / Math.max((lowerRightX - upperLeftX) / width, (lowerRightY - upperLeftY) / height);
   projection.scale(s);
@@ -119,11 +107,10 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2
   g.append("g")
     .attr("id", "countries")
     .selectAll("path")
-    .data(topojson.feature(topoData, topoData.objects.countries).features)
+    .data(features)
     .enter()
     .append("path")
     .attr("d", path)
-    //.on("click", clicked)
     
     .on("mouseover", function(d){
       d3.select(this)
@@ -135,18 +122,21 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2
       d3.select("#textbox")
         .html("")
         .append("text")
-        .html(string)
+        .html(string);
     })
 
     .on("mouseout", function(d){
       d3.select(this)
-      .attr("fill", defaultFill)
+        .attr("fill", defaultFill);
+
+      d3.select("#textbox")
+        .html("");
     })
     
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
 
-  // add dma borders
+  // add borders
   g.append("path", ".graticule")
       .datum(topojson.mesh(topoData, topoData.objects.countries, function(a, b) { 
         return true;
