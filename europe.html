@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,8 +77,8 @@ var g = svg.append("g");
 
 var defaultFill = "#aaa";
 
-d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2792ff15259f3cf6468c4fac3/topo/europe-50m.json", function(error, topoData) {
-  var features = topojson.feature(topoData, topoData.objects.countries).features;
+d3.json("./topo/europe-regions-10m.json", function(error, topoData) {
+  var features = topojson.feature(topoData, topoData.objects.regions).features;
   var featureBounds = _.map(features, function(feature) {
       return path.bounds(feature);
   });
@@ -111,13 +112,14 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2
     .enter()
     .append("path")
     .attr("d", path)
-    
+
     .on("mouseover", function(d){
       d3.select(this)
       .attr("fill", "orange");
 
-      var string = "<p><strong>Country Name</strong>: " + d.properties.name + "</p>";
-      string += "<p><strong>Country Code</strong>: " + d.id + "</p>";
+      var string = "<p><strong>Europe Region Code</strong>: " + d.properties.area_reg + "</p>";
+      string += "<p><strong>Europe Country</strong>: " + d.properties.area + "</p>";
+      string += "<p><strong>Unique Region Code</strong>: " + d.id + "</p>";
 
       d3.select("#textbox")
         .html("")
@@ -132,13 +134,13 @@ d3.json("https://raw.githubusercontent.com/VideoAmp/world-atlas/1d13c439f8de18d2
       d3.select("#textbox")
         .html("");
     })
-    
+
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
 
   // add borders
   g.append("path", ".graticule")
-      .datum(topojson.mesh(topoData, topoData.objects.countries, function(a, b) { 
+      .datum(topojson.mesh(topoData, topoData.objects.countries, function(a, b) {
         return true;
       }))
       .attr("id", "borders")

@@ -58,7 +58,7 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 europe-10m-country-regions: shp/europe-10m-country-regions/europe-regions.shp
 	mkdir -p topo
 	$(TOPOJSON) \
-		--quantization 1e5 \
+		--quantization 1e3 \
 		--id-property=adm1_code \
 		-p area,area_reg \
 		-- regions=shp/europe-10m-country-regions/europe-regions.shp \
