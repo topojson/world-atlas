@@ -8,11 +8,11 @@ world-50m: shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp
 	$(TOPOJSON) \
 		--quantization 1e5 \
 		--id-property=iso_a3 \
-		-p name,continent \
-		-- countries=shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp \
+		-p name,country \
+		-- features=shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp \
 		| $(TOPOMERGE) \
 			-o topo/world-50m.json \
-			--io=countries \
+			--io=features \
 			--oo=land \
 			--no-key
 
@@ -21,11 +21,11 @@ europe-50m: shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp
 	$(TOPOJSON) \
 		--quantization 1e5 \
 		--id-property=iso_a3 \
-		-p name \
-		-- countries=shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp \
+		-p name,country \
+		-- features=shp/europe_50m_admin_0_countries/europe_50m_admin_0_countries.shp \
 		| $(TOPOMERGE) \
 			-o topo/europe-50m.json \
-			--io=countries \
+			--io=features \
 			--oo=land \
 			--no-key
 
@@ -34,11 +34,11 @@ nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
 	$(TOPOJSON) \
 		--quantization 1e5 \
 		--id-property=id \
-		-p name \
-		-- dmas=shp/nielsen-dma/nielsen-dma.shp \
+		-p name,country,metro \
+		-- features=shp/nielsen-dma/nielsen-dma.shp \
 		| $(TOPOMERGE) \
-			-o topo/nielsen-dma.json \
-			--io=dmas \
+			-o topo/us-dma-50m.json \
+			--io=features \
 			--oo=land \
 			--no-key
 
@@ -48,10 +48,10 @@ usa-states-50m: shp/usa-states-50m/usa-states-50m.shp
 		--quantization 1e5 \
 		--id-property=iso_3166_2 \
 		-p name,country,region \
-		-- states=shp/usa-states-50m/usa-states-50m.shp \
+		-- features=shp/usa-states-50m/usa-states-50m.shp \
 		| $(TOPOMERGE) \
-			-o topo/usa-states-50m.json \
-			--io=states \
+			-o topo/us-states-50m.json \
+			--io=features \
 			--oo=land \
 			--no-key
 
