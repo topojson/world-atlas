@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prepublish": "bash prepublish",
-    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp ../world-atlas/world/110m.json world-110m.v0.json && cp ../world-atlas/world/50m.json world-50m.v0.json && git add world-110m.v0.json world-50m.v0.json && git commit -m \"world-atlas ${VERSION}\" && git push && cd -"
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp ../world-atlas/world/110m.json world-110m.v1.json && cp ../world-atlas/world/50m.json world-50m.v1.json && git add world-110m.v1.json world-50m.v1.json && git commit -m \"world-atlas ${VERSION}\" && git push && cd -"
   },
   "devDependencies": {
     "d3-dsv": "1",
