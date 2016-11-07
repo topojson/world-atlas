@@ -18,6 +18,11 @@ world() {
         | geostitch -n) \
     | topomerge land=countries \
     > world/$1.json
+  shp2json -n build/ne_$1_admin_0_countries.shp \
+    | ndjson-map 'd.properties' \
+    | ndjson-sort 'a.iso_a3.localeCompare(b.iso_a3)' \
+    | json2tsv -n \
+    > world/$1.tsv
 }
 
 world 110m
