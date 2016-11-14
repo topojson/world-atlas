@@ -21,12 +21,12 @@
     "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp -v ../world-atlas/world/110m.json world-110m.v1.json && cp -v ../world-atlas/world/110m.tsv world-110m.v1.tsv && cp -v ../world-atlas/world/50m.json world-50m.v1.json && cp -v ../world-atlas/world/50m.tsv world-50m.v1.tsv && git add world-110m.v1.json world-110m.v1.tsv world-50m.v1.json world-50m.v1.tsv && git commit -m \"world-atlas ${VERSION}\" && git push && cd -"
   },
   "devDependencies": {
-    "d3-dsv": "1",
-    "d3-geo-projection": "^1.1.1",
-    "ndjson-cli": "^0.0.5",
-    "shapefile": "0.5",
-    "topojson": "2",
-    "topojson-client": "2",
-    "topojson-simplify": "2"
+    "d3-dsv": "^1.0.3",
+    "d3-geo-projection": "^1.2.1",
+    "ndjson-cli": "^0.3.0",
+    "shapefile": "^0.5.9",
+    "topojson": "^2.0.0",
+    "topojson-client": "^2.1.0",
+    "topojson-simplify": "^2.0.0"
   }
 }
