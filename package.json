@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prepublish": "bash prepublish",
-    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cd ../d3.github.com && git pull && cp -v ../world-atlas/world/110m.json world-110m.v1.json && cp -v ../world-atlas/world/110m.tsv world-110m.v1.tsv && cp -v ../world-atlas/world/50m.json world-50m.v1.json && cp -v ../world-atlas/world/50m.tsv world-50m.v1.tsv && git add world-110m.v1.json world-110m.v1.tsv world-50m.v1.json world-50m.v1.tsv && git commit -m \"world-atlas ${VERSION}\" && git push && cd -"
+    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp -v ../world-atlas/world/110m.json world-110m.v1.json && cp -v ../world-atlas/world/110m.tsv world-110m.v1.tsv && cp -v ../world-atlas/world/50m.json world-50m.v1.json && cp -v ../world-atlas/world/50m.tsv world-50m.v1.tsv && git add world-110m.v1.json world-110m.v1.tsv world-50m.v1.json world-50m.v1.tsv && git commit -m \"world-atlas ${npm_package_version}\" && git push && cd -"
   },
   "devDependencies": {
     "d3-dsv": "^1.0.3",
