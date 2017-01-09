@@ -1,8 +1,6 @@
 TOPOJSON = node_modules/.bin/topojson
 TOPOMERGE = node_modules/.bin/topojson-merge
 
-all:
-
 world-50m: shp/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp
 	mkdir -p topo
 	$(TOPOJSON) \
@@ -38,6 +36,19 @@ nielsen-dma: shp/nielsen-dma/nielsen-dma.shp
 		-- features=shp/nielsen-dma/nielsen-dma.shp \
 		| $(TOPOMERGE) \
 			-o topo/us-dma-50m.json \
+			--io=features \
+			--oo=land \
+			--no-key
+
+nielsen-dma-complete: shp/nielsen-dma-complete/nielsen-dma-complete.shp
+	mkdir -p topo
+	$(TOPOJSON) \
+		--quantization 1e5 \
+		--id-property=id \
+		-p name,country,metro \
+		-- features=shp/nielsen-dma-complete/nielsen-dma-complete.shp \
+		| $(TOPOMERGE) \
+			-o topo/us-dma-50m-complete.json \
 			--io=features \
 			--oo=land \
 			--no-key
