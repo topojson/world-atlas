@@ -24,8 +24,8 @@
     "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^1.2.1",
     "ndjson-cli": "^0.3.0",
-    "shapefile": "^0.5.9",
-    "topojson": "^2.0.0",
+    "shapefile": "^0.6.1",
+    "topojson-server": "^2.0.0",
     "topojson-client": "^2.1.0",
     "topojson-simplify": "^2.0.0"
   }
