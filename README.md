@@ -10,13 +10,13 @@ In a browser (using [d3-geo](https://github.com/d3/d3-geo) and Canvas), [bl.ocks
 <!DOCTYPE html>
 <canvas width="960" height="500"></canvas>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
 <script>
 
 var context = d3.select("canvas").node().getContext("2d"),
     path = d3.geoPath(d3.geoOrthographic(), context);
 
-d3.json("https://d3js.org/world-110m.v1.json", function(error, world) {
+d3.json("https://unpkg.com/world-atlas@1/world/110m.json", function(error, world) {
   if (error) throw error;
 
   context.beginPath();
@@ -49,7 +49,7 @@ canvas.pngStream().pipe(fs.createWriteStream("preview.png"));
 
 ## File Reference
 
-<a href="#world/110m.json" name="world/110m.json">#</a> <b>world/110m.json</b> [<>](https://d3js.org/world-110m.v1.json "Source")
+<a href="#world/110m.json" name="world/110m.json">#</a> <b>world/110m.json</b> [<>](https://unpkg.com/world-atlas@1/world/110m.json "Source")
 
 A [TopoJSON *topology*](https://github.com/topojson/topojson-specification/blob/master/README.md#21-topology-objects) containing two geometry collections: <i>countries</i> and <i>land</i>. The geometry is quantized, but not projected; it is in spherical coordinates, decimal degrees. This topology is derived from the Natural Earth’s [Admin 0 country boundaries](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/), 1:110m small scale, version 2.0.0. The land boundary is computed by [merging](https://github.com/topojson/topojson-client/blob/master/README.md#merge) countries, ensuring a consistent topology.
 
@@ -61,7 +61,7 @@ A [TopoJSON *topology*](https://github.com/topojson/topojson-specification/blob/
 
 <img src="https://raw.githubusercontent.com/topojson/world-atlas/master/img/world-110m-land.png" width="480" height="300">
 
-<a href="#world/50m.json" name="world/50m.json">#</a> <b>world/50m.json</b> [<>](https://d3js.org/world-50m.v1.json "Source")
+<a href="#world/50m.json" name="world/50m.json">#</a> <b>world/50m.json</b> [<>](https://unpkg.com/world-atlas@1/world/50m.json "Source")
 
 Equivalent to [world/110m.json](#world/110m.json), but at 1:50m medium scale.
 
