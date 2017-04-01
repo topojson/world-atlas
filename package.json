@@ -1,6 +1,6 @@
 {
   "name": "world-atlas",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Pre-built TopoJSON from Natural Earth.",
   "license": "BSD-3-Clause",
   "keywords": [
