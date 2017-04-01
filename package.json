@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "d3-dsv": "^1.0.3",
-    "d3-geo-projection": "^1.2.1",
+    "d3-geo-projection": "^2.0.1",
     "ndjson-cli": "^0.3.0",
     "shapefile": "^0.6.1",
     "topojson-server": "^3.0.0",
