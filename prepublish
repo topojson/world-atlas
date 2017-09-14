@@ -14,7 +14,7 @@ world() {
   mkdir -p world
   geo2topo -q 1e5 -n countries=<( \
       shp2json -n build/ne_$1_admin_0_countries.shp \
-        | ndjson-map '(d.id = d.properties.iso_n3, delete d.properties, d)' \
+        | ndjson-map 'i = d.properties.iso_n3, d.id = i === "-99" ? undefined : i, delete d.properties, d' \
         | geostitch -n) \
     | topomerge land=countries \
     > world/$1.json
