@@ -20,7 +20,7 @@ world() {
     > world/$1.json
   shp2json -n build/ne_$1_admin_0_countries.shp \
     | ndjson-map 'd.properties' \
-    | ndjson-sort 'a.iso_a3.localeCompare(b.iso_a3)' \
+    | ndjson-sort 'a.ISO_A3.localeCompare(b.ISO_A3)' \
     | json2tsv -n \
     > world/$1.tsv
 }
