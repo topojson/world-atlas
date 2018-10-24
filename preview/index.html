@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+const width = window.innerWidth;
+const height = width * (9 / 16);
+
+const svg = d3
+  .select('body')
+  .append('svg')
+  .attr('width', width)
+  .attr('height', height);
+
+const projection = d3.geoMercator().translate([width / 2, height / 1.5]);
+// .scale(130)
+
+const path = d3.geoPath().projection(projection);
+
+d3.json('/world/50m.json', function ready(error, world) {
+  svg
+    .append('g')
+    .attr('class', 'countries')
+    .selectAll('path')
+    .data(topojson.feature(world, world.objects.countries).features)
+    .enter()
+    .append('path')
+    .attr('d', path)
+    .style('stroke', 'black')
+    .style('fill', '#eee')
+    .style('stroke-width', 0.5)
+    .style('opacity', 0.5);
+
+  svg
+    .append('g')
+    .attr('class', 'land')
+    .selectAll('path')
+    .data(topojson.feature(world, world.objects.land).features)
+    .enter()
+    .append('path')
+    .attr('d', path)
+    .style('stroke', 'black')
+    .style('fill', 'none')
+    .style('stroke-width', 0.5);
+});
+</script>
+</body>
+</html>

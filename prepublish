@@ -1,37 +1,47 @@
 #!/bin/bash
 
-# rm -rvf world
-
 # alternative shape files with admin_0_sovereignty states separated out
 # https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_sovereignty.zip
 
 # alternative shape files with admin_0 map units separated out
 # https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_units.zip
 
-world_shp() {
-  mkdir -p build
-  curl -z build/ne_$1_admin_0_countries.zip -o build/ne_$1_admin_0_countries.zip http://naciscdn.org/naturalearth/$1/cultural/ne_$1_admin_0_countries.zip
-  unzip -od build build/ne_$1_admin_0_countries.zip
-  chmod a-x build/ne_$1_admin_0_countries.*
+fetch_shp() {
+  echo
+  echo "-----------------------------------------------------------------------"
+  echo "Fetching $2 data from Natural Earth at 1:$1 scale"
+  echo "-----------------------------------------------------------------------"
+  echo
+
+  curl -z build/ne_$1_admin_0_$2.zip -o build/ne_$1_admin_0_$2.zip http://naciscdn.org/naturalearth/$1/cultural/ne_$1_admin_0_$2.zip
+  unzip -od build build/ne_$1_admin_0_$2.zip
+  chmod a-x build/ne_$1_admin_0_$2.*
 }
 
-world_sov_shp() {
-  mkdir -p build
-  curl -o build/ne_$1_admin_0_sovereignty.zip http://www.naturalearthdata.com/download/$1/cultural/ne_$1_admin_0_sovereignty.zip
-  unzip -od build build/ne_$1_admin_0_sovereignty.zip
-  chmod a-x build/ne_$1_admin_0_sovereignty.*
-}
-
-world_sov() {
-  # world_sov_shp $1
-  mkdir -p world
+make_world_topo() {
+  echo
+  echo "Building world topology -- world/$1.json"
+  echo "-----------------------------------------------------------------------"
+  echo
 
   geo2topo -q 1e5 -n countries=<( \
-      shp2json -n build/ne_$1_admin_0_map_units.shp \
-        | ndjson-map 'd.id = d.properties.iso_n3, d' \
-        | geostitch -n) \
+    shp2json -n build/ne_$1_admin_0_$2.shp \
+    | ndjson-map 'd.id = d.properties.iso_n3, delete d.properties, d' \
+    | geostitch -n) \
     | topomerge land=countries \
+    | toposimplify -S 0.35 \
     > world/$1.json
 }
 
-world_sov 10m
+world() {
+  fetch_shp $1 $2
+  make_world_topo $1 $2
+}
+
+# rm -rvf world
+
+mkdir -p build
+mkdir -p world
+
+world 110m map_units
+world 50m map_units
