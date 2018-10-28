@@ -19,35 +19,67 @@ function saveJSON(fileName, data) {
   return task;
 }
 
-function debugTopo({ properties }, error) {
-  console.log(
-    error,
-    '-',
-    [
-      properties.GEOUNIT,
-      properties.TYPE,
-      properties.ISO_A2,
-      properties.GU_A3,
-      properties.ADM0_A3
-    ].toString()
-  );
+function summarizeTopo(properties) {
+  return [
+    properties.GEOUNIT,
+    properties.GU_A3,
+    properties.TYPE
+    // properties.ISO_A2,
+    // properties.ADM0_A3
+  ].join(' | ');
+}
+
+function logCountryMatch(country, properties) {
+  const flag = country.flag || '🌐';
+  const metaName = country.name;
+
+  const matchString = `${flag}  ${summarizeTopo(properties)} => ${metaName}`;
+
+  console.log('\x1b[2m%s\x1b[0m', matchString);
+}
+
+function logMatchError({ properties }, error) {
+  const errorLine = `❔  ${summarizeTopo(properties)} - ${error}`;
+
+  console.log('\x1b[1m%s\x1b[0m', errorLine);
 }
 
 loadJSON('meta/countries.json').then(countries => {
   const countriesByA2 = new Map(countries.map(c => [c.iso, c]));
   const countriesByA3 = new Map(countries.map(c => [c.iso_a3, c]));
 
+  // ⚠️ some of these are controversial editorial assignments ⚠️
+  // n.b. updated geonames + ISO data may resolve the need for them
+  const overrides = new Map([
+    ['CYN', countries.find(c => c.iso === 'CY')], // Northern Cyprus => Cyprus
+    ['GAZ', countries.find(c => c.iso === 'PS')], // Gaza => Palestine
+    ['SOL', countries.find(c => c.iso === 'ET')], // Somaliland => Ethopia
+    ['NLY', countries.find(c => c.iso === 'BQ')], // Carribbean NL => Bonaire...
+    ['NLX', countries.find(c => c.iso === 'NL')], // Mainland NL => Netherlands
+    ['NSV', countries.find(c => c.iso === 'SJ')], // Svalbard => Sv. & Jan Mayen
+    ['WEB', countries.find(c => c.iso === 'PS')] //  West Bank => Palestine
+  ]);
+
   loadJSON(TARGET_FILE).then(data => {
     const topologies = [...data.objects.countries.geometries];
     const updatedTopologies = [];
     const countriesMatched = new Set();
 
+    topologies.sort((a, b) => {
+      if (a.properties.GEOUNIT < b.properties.GEOUNIT) return -1;
+      if (a.properties.GEOUNIT > b.properties.GEOUNIT) return +1;
+      else {
+        return 0;
+      }
+    });
+
     for (let topology of topologies) {
       let properties = topology.properties;
+      let isoGeoUnit = properties.GU_A3;
       let error = undefined;
 
       // start by attempting to lookup the ISO code for the corresponding geounit
-      let country = countriesByA3.get(properties.GU_A3);
+      let country = countriesByA3.get(isoGeoUnit) || overrides.get(isoGeoUnit);
 
       // if no match found, use tactics based on the territory type
       if (!country) {
@@ -83,8 +115,6 @@ loadJSON('meta/countries.json').then(countries => {
       }
 
       if (country) {
-        console.log(properties.GEOUNIT, '=>', country.name, country.flag);
-
         countriesMatched.add(country);
 
         updatedTopologies.push({
@@ -94,21 +124,21 @@ loadJSON('meta/countries.json').then(countries => {
             name: properties.GEOUNIT
           }
         });
+
+        logCountryMatch(country, properties);
       } else {
-        debugTopo(topology, error);
+        logMatchError(topology, error);
       }
     }
+
+    console.log();
+    console.log('Number of topologies linked to geonames ids:');
+    console.log(`${updatedTopologies.length} / ${topologies.length}`);
 
     // update JSON file data
     data.objects.countries.geometries = updatedTopologies;
     saveJSON(TARGET_FILE, data);
 
-    console.log();
-    console.log('Number of topologies linked to geonames ids:');
-    console.log(`${updatedTopologies.length} / ${topologies.length}`);
-    console.log();
-    console.log('Number of countries matched to topologies:');
-    console.log(`${countriesMatched.size} / ${countries.length}`);
     console.log();
     console.log('Countries without topologies:');
     console.log(
