@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
+  .sea path {
+    fill: none;
+    stroke: blue;
+    stroke-width: 10;
+    opacity: 0.05;
+  }
+  .countries path {
+    fill: #fafafa;
+    stroke: black;
+    stroke-width: 1;
+    stroke-opacity: 0.25;
+  }
+  .land path {
+    fill: none;
+    stroke: #333;
+    stroke-width: 1.5;
+  }
 </style>
 <body>
 <script src="http://d3js.org/d3.v4.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
+const projections = {
+  MERCATOR: d3.geoMercator
+};
+
+const mapDefs = {
+  WORLD: {
+    projectionType: projections.MERCATOR,
+    scaleFactor: 0.1694,
+    xPct: 0.4567,
+    yPct: 0.5995
+  },
+  BALKANS: {
+    projectionType: projections.MERCATOR,
+    scaleFactor: 1.9766226797371163,
+    xPct: -0.2738494634427111,
+    yPct: 3.374756946979661
+  }
+};
+
+function makeProjection({
+  width,
+  height,
+  projectionType,
+  scaleFactor,
+  xPct,
+  yPct
+}) {
+  const projection = projectionType();
+
+  // projection.precision(16 * 16);
+  projection.scale(width * scaleFactor);
+  projection.translate([width * xPct, height * yPct]);
+
+  projection.clipExtent([[-10, -10], [width + 10, height + 10]]);
+
+  return projection;
+}
+
 const width = window.innerWidth;
 const height = width * (9 / 16);
 
-const svg = d3
+const map = d3
   .select('body')
   .append('svg')
   .attr('width', width)
   .attr('height', height);
 
-const projection = d3.geoMercator().translate([width / 2, height / 1.5]);
-// .scale(130)
+const sea = map.append('g').attr('class', 'sea');
+const countries = map.append('g').attr('class', 'countries');
+const land = map.append('g').attr('class', 'land');
 
-const path = d3.geoPath().projection(projection);
+const topologies = {};
 
-d3.json('/world/50m.json', function ready(error, world) {
-  svg
-    .append('g')
-    .attr('class', 'countries')
+function drawMap({ width, height, topology, config }) {
+  const projection = makeProjection({
+    width,
+    height,
+    ...config
+  });
+
+  const path = d3.geoPath().projection(projection);
+
+  sea
     .selectAll('path')
-    .data(topojson.feature(world, world.objects.countries).features)
+    .data(topojson.feature(topology, topology.objects.land).features)
     .enter()
     .append('path')
-    .attr('d', path)
-    .style('stroke', 'black')
-    .style('fill', '#eee')
-    .style('stroke-width', 0.5)
-    .style('opacity', 0.5);
+    .attr('d', path);
 
-  svg
-    .append('g')
-    .attr('class', 'land')
+  countries
     .selectAll('path')
-    .data(topojson.feature(world, world.objects.land).features)
+    .data(topojson.feature(topology, topology.objects.countries).features)
     .enter()
     .append('path')
-    .attr('d', path)
-    .style('stroke', 'black')
-    .style('fill', 'none')
-    .style('stroke-width', 0.5);
+    .attr('d', path);
+
+  land
+    .selectAll('path')
+    .data(topojson.feature(topology, topology.objects.land).features)
+    .enter()
+    .append('path')
+    .attr('d', path);
+}
+
+d3.json(`/world/10m.json?q=${Math.random()}`, (error, topology) => {
+  topologies['world10m'] = topology;
+
+  drawMap({
+    width,
+    height,
+    topology,
+    config: mapDefs.BALKANS
+  });
 });
 </script>
 </body>

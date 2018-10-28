@@ -1,0 +1,2270 @@
+[
+  {
+    "iso": "AD",
+    "iso_a3": "AND",
+    "iso_numeric": "20",
+    "geonames_id": "3041565",
+    "name": "Andorra",
+    "region": "Western Europe",
+    "flag": "🇦🇩"
+  },
+  {
+    "iso": "AE",
+    "iso_a3": "ARE",
+    "iso_numeric": "784",
+    "geonames_id": "290557",
+    "name": "United Arab Emirates",
+    "region": "Middle East",
+    "flag": "🇦🇪"
+  },
+  {
+    "iso": "AF",
+    "iso_a3": "AFG",
+    "iso_numeric": "4",
+    "geonames_id": "1149361",
+    "name": "Afghanistan",
+    "region": "South Asia",
+    "flag": "🇦🇫"
+  },
+  {
+    "iso": "AG",
+    "iso_a3": "ATG",
+    "iso_numeric": "28",
+    "geonames_id": "3576396",
+    "name": "Antigua and Barbuda",
+    "region": "North America",
+    "flag": "🇦🇬"
+  },
+  {
+    "iso": "AI",
+    "iso_a3": "AIA",
+    "iso_numeric": "660",
+    "geonames_id": "3573511",
+    "name": "Anguilla",
+    "region": "North America",
+    "flag": "🇦🇮"
+  },
+  {
+    "iso": "AL",
+    "iso_a3": "ALB",
+    "iso_numeric": "8",
+    "geonames_id": "783754",
+    "name": "Albania",
+    "region": "Western Europe",
+    "flag": "🇦🇱"
+  },
+  {
+    "iso": "AM",
+    "iso_a3": "ARM",
+    "iso_numeric": "51",
+    "geonames_id": "174982",
+    "name": "Armenia",
+    "region": "Eastern Europe",
+    "flag": "🇦🇲"
+  },
+  {
+    "iso": "AO",
+    "iso_a3": "AGO",
+    "iso_numeric": "24",
+    "geonames_id": "3351879",
+    "name": "Angola",
+    "region": "Southern Africa",
+    "flag": "🇦🇴"
+  },
+  {
+    "iso": "AQ",
+    "iso_a3": "ATA",
+    "iso_numeric": "10",
+    "geonames_id": "6697173",
+    "name": "Antarctica",
+    "region": "Antarctica",
+    "flag": "🇦🇶"
+  },
+  {
+    "iso": "AR",
+    "iso_a3": "ARG",
+    "iso_numeric": "32",
+    "geonames_id": "3865483",
+    "name": "Argentina",
+    "region": "South America",
+    "flag": "🇦🇷"
+  },
+  {
+    "iso": "AS",
+    "iso_a3": "ASM",
+    "iso_numeric": "16",
+    "geonames_id": "5880801",
+    "name": "American Samoa",
+    "region": "Aus / NZ",
+    "flag": "🇦🇸"
+  },
+  {
+    "iso": "AT",
+    "iso_a3": "AUT",
+    "iso_numeric": "40",
+    "geonames_id": "2782113",
+    "name": "Austria",
+    "region": "Western Europe",
+    "flag": "🇦🇹"
+  },
+  {
+    "iso": "AU",
+    "iso_a3": "AUS",
+    "iso_numeric": "36",
+    "geonames_id": "2077456",
+    "name": "Australia",
+    "region": "Aus / NZ",
+    "flag": "🇦🇺"
+  },
+  {
+    "iso": "AW",
+    "iso_a3": "ABW",
+    "iso_numeric": "533",
+    "geonames_id": "3577279",
+    "name": "Aruba",
+    "region": "North America",
+    "flag": "🇦🇼"
+  },
+  {
+    "iso": "AX",
+    "iso_a3": "ALA",
+    "iso_numeric": "248",
+    "geonames_id": "661882",
+    "name": "Aland Islands",
+    "region": "Northern Europe",
+    "flag": "🇦🇽"
+  },
+  {
+    "iso": "AZ",
+    "iso_a3": "AZE",
+    "iso_numeric": "31",
+    "geonames_id": "587116",
+    "name": "Azerbaijan",
+    "region": "Eastern Europe",
+    "flag": "🇦🇿"
+  },
+  {
+    "iso": "BA",
+    "iso_a3": "BIH",
+    "iso_numeric": "70",
+    "geonames_id": "3277605",
+    "name": "Bosnia and Herzegovina",
+    "region": "Western Europe",
+    "flag": "🇧🇦"
+  },
+  {
+    "iso": "BB",
+    "iso_a3": "BRB",
+    "iso_numeric": "52",
+    "geonames_id": "3374084",
+    "name": "Barbados",
+    "region": "North America",
+    "flag": "🇧🇧"
+  },
+  {
+    "iso": "BD",
+    "iso_a3": "BGD",
+    "iso_numeric": "50",
+    "geonames_id": "1210997",
+    "name": "Bangladesh",
+    "region": "South Asia",
+    "flag": "🇧🇩"
+  },
+  {
+    "iso": "BE",
+    "iso_a3": "BEL",
+    "iso_numeric": "56",
+    "geonames_id": "2802361",
+    "name": "Belgium",
+    "region": "Western Europe",
+    "flag": "🇧🇪"
+  },
+  {
+    "iso": "BF",
+    "iso_a3": "BFA",
+    "iso_numeric": "854",
+    "geonames_id": "2361809",
+    "name": "Burkina Faso",
+    "region": "West Africa",
+    "flag": "🇧🇫"
+  },
+  {
+    "iso": "BG",
+    "iso_a3": "BGR",
+    "iso_numeric": "100",
+    "geonames_id": "732800",
+    "name": "Bulgaria",
+    "region": "Eastern Europe",
+    "flag": "🇧🇬"
+  },
+  {
+    "iso": "BH",
+    "iso_a3": "BHR",
+    "iso_numeric": "48",
+    "geonames_id": "290291",
+    "name": "Bahrain",
+    "region": "Middle East",
+    "flag": "🇧🇭"
+  },
+  {
+    "iso": "BI",
+    "iso_a3": "BDI",
+    "iso_numeric": "108",
+    "geonames_id": "433561",
+    "name": "Burundi",
+    "region": "East Africa",
+    "flag": "🇧🇮"
+  },
+  {
+    "iso": "BJ",
+    "iso_a3": "BEN",
+    "iso_numeric": "204",
+    "geonames_id": "2395170",
+    "name": "Benin",
+    "region": "West Africa",
+    "flag": "🇧🇯"
+  },
+  {
+    "iso": "BL",
+    "iso_a3": "BLM",
+    "iso_numeric": "652",
+    "geonames_id": "3578476",
+    "name": "Saint Barthelemy",
+    "region": "North America",
+    "flag": "🇧🇱"
+  },
+  {
+    "iso": "BM",
+    "iso_a3": "BMU",
+    "iso_numeric": "60",
+    "geonames_id": "3573345",
+    "name": "Bermuda",
+    "region": "North America",
+    "flag": "🇧🇲"
+  },
+  {
+    "iso": "BN",
+    "iso_a3": "BRN",
+    "iso_numeric": "96",
+    "geonames_id": "1820814",
+    "name": "Brunei",
+    "region": "East Asia",
+    "flag": "🇧🇳"
+  },
+  {
+    "iso": "BO",
+    "iso_a3": "BOL",
+    "iso_numeric": "68",
+    "geonames_id": "3923057",
+    "name": "Bolivia",
+    "region": "South America",
+    "flag": "🇧🇴"
+  },
+  {
+    "iso": "BQ",
+    "iso_a3": "BES",
+    "iso_numeric": "535",
+    "geonames_id": "7626844",
+    "name": "Bonaire, Saint Eustatius and Saba",
+    "region": "North America",
+    "flag": "🇧🇶"
+  },
+  {
+    "iso": "BR",
+    "iso_a3": "BRA",
+    "iso_numeric": "76",
+    "geonames_id": "3469034",
+    "name": "Brazil",
+    "region": "South America",
+    "flag": "🇧🇷"
+  },
+  {
+    "iso": "BS",
+    "iso_a3": "BHS",
+    "iso_numeric": "44",
+    "geonames_id": "3572887",
+    "name": "Bahamas",
+    "region": "North America",
+    "flag": "🇧🇸"
+  },
+  {
+    "iso": "BT",
+    "iso_a3": "BTN",
+    "iso_numeric": "64",
+    "geonames_id": "1252634",
+    "name": "Bhutan",
+    "region": "South Asia",
+    "flag": "🇧🇹"
+  },
+  {
+    "iso": "BV",
+    "iso_a3": "BVT",
+    "iso_numeric": "74",
+    "geonames_id": "3371123",
+    "name": "Bouvet Island",
+    "region": "Antarctica",
+    "flag": "🇧🇻"
+  },
+  {
+    "iso": "BW",
+    "iso_a3": "BWA",
+    "iso_numeric": "72",
+    "geonames_id": "933860",
+    "name": "Botswana",
+    "region": "Southern Africa",
+    "flag": "🇧🇼"
+  },
+  {
+    "iso": "BY",
+    "iso_a3": "BLR",
+    "iso_numeric": "112",
+    "geonames_id": "630336",
+    "name": "Belarus",
+    "region": "Eastern Europe",
+    "flag": "🇧🇾"
+  },
+  {
+    "iso": "BZ",
+    "iso_a3": "BLZ",
+    "iso_numeric": "84",
+    "geonames_id": "3582678",
+    "name": "Belize",
+    "region": "North America",
+    "flag": "🇧🇿"
+  },
+  {
+    "iso": "CA",
+    "iso_a3": "CAN",
+    "iso_numeric": "124",
+    "geonames_id": "6251999",
+    "name": "Canada",
+    "region": "North America",
+    "flag": "🇨🇦"
+  },
+  {
+    "iso": "CC",
+    "iso_a3": "CCK",
+    "iso_numeric": "166",
+    "geonames_id": "1547376",
+    "name": "Cocos Islands",
+    "region": "Aus / NZ",
+    "flag": "🇨🇨"
+  },
+  {
+    "iso": "CD",
+    "iso_a3": "COD",
+    "iso_numeric": "180",
+    "geonames_id": "203312",
+    "name": "Democratic Republic of the Congo",
+    "region": "Central Africa",
+    "flag": "🇨🇩"
+  },
+  {
+    "iso": "CF",
+    "iso_a3": "CAF",
+    "iso_numeric": "140",
+    "geonames_id": "239880",
+    "name": "Central African Republic",
+    "region": "Central Africa",
+    "flag": "🇨🇫"
+  },
+  {
+    "iso": "CG",
+    "iso_a3": "COG",
+    "iso_numeric": "178",
+    "geonames_id": "2260494",
+    "name": "Republic of the Congo",
+    "region": "Central Africa",
+    "flag": "🇨🇬"
+  },
+  {
+    "iso": "CH",
+    "iso_a3": "CHE",
+    "iso_numeric": "756",
+    "geonames_id": "2658434",
+    "name": "Switzerland",
+    "region": "Western Europe",
+    "flag": "🇨🇭"
+  },
+  {
+    "iso": "CI",
+    "iso_a3": "CIV",
+    "iso_numeric": "384",
+    "geonames_id": "2287781",
+    "name": "Ivory Coast",
+    "region": "West Africa",
+    "flag": "🇨🇮"
+  },
+  {
+    "iso": "CK",
+    "iso_a3": "COK",
+    "iso_numeric": "184",
+    "geonames_id": "1899402",
+    "name": "Cook Islands",
+    "region": "Aus / NZ",
+    "flag": "🇨🇰"
+  },
+  {
+    "iso": "CL",
+    "iso_a3": "CHL",
+    "iso_numeric": "152",
+    "geonames_id": "3895114",
+    "name": "Chile",
+    "region": "South America",
+    "flag": "🇨🇱"
+  },
+  {
+    "iso": "CM",
+    "iso_a3": "CMR",
+    "iso_numeric": "120",
+    "geonames_id": "2233387",
+    "name": "Cameroon",
+    "region": "West Africa",
+    "flag": "🇨🇲"
+  },
+  {
+    "iso": "CN",
+    "iso_a3": "CHN",
+    "iso_numeric": "156",
+    "geonames_id": "1814991",
+    "name": "China",
+    "region": "China",
+    "flag": "🇨🇳"
+  },
+  {
+    "iso": "CO",
+    "iso_a3": "COL",
+    "iso_numeric": "170",
+    "geonames_id": "3686110",
+    "name": "Colombia",
+    "region": "South America",
+    "flag": "🇨🇴"
+  },
+  {
+    "iso": "CR",
+    "iso_a3": "CRI",
+    "iso_numeric": "188",
+    "geonames_id": "3624060",
+    "name": "Costa Rica",
+    "region": "North America",
+    "flag": "🇨🇷"
+  },
+  {
+    "iso": "CU",
+    "iso_a3": "CUB",
+    "iso_numeric": "192",
+    "geonames_id": "3562981",
+    "name": "Cuba",
+    "region": "North America",
+    "flag": "🇨🇺"
+  },
+  {
+    "iso": "CV",
+    "iso_a3": "CPV",
+    "iso_numeric": "132",
+    "geonames_id": "3374766",
+    "name": "Cape Verde",
+    "region": "West Africa",
+    "flag": "🇨🇻"
+  },
+  {
+    "iso": "CW",
+    "iso_a3": "CUW",
+    "iso_numeric": "531",
+    "geonames_id": "7626836",
+    "name": "Curacao",
+    "region": "North America",
+    "flag": "🇨🇼"
+  },
+  {
+    "iso": "CX",
+    "iso_a3": "CXR",
+    "iso_numeric": "162",
+    "geonames_id": "2078138",
+    "name": "Christmas Island",
+    "region": "Aus / NZ",
+    "flag": "🇨🇽"
+  },
+  {
+    "iso": "CY",
+    "iso_a3": "CYP",
+    "iso_numeric": "196",
+    "geonames_id": "146669",
+    "name": "Cyprus",
+    "region": "Western Europe",
+    "flag": "🇨🇾"
+  },
+  {
+    "iso": "CZ",
+    "iso_a3": "CZE",
+    "iso_numeric": "203",
+    "geonames_id": "3077311",
+    "name": "Czechia",
+    "region": "Eastern Europe",
+    "flag": "🇨🇿"
+  },
+  {
+    "iso": "DE",
+    "iso_a3": "DEU",
+    "iso_numeric": "276",
+    "geonames_id": "2921044",
+    "name": "Germany",
+    "region": "Western Europe",
+    "flag": "🇩🇪"
+  },
+  {
+    "iso": "DJ",
+    "iso_a3": "DJI",
+    "iso_numeric": "262",
+    "geonames_id": "223816",
+    "name": "Djibouti",
+    "region": "East Africa",
+    "flag": "🇩🇯"
+  },
+  {
+    "iso": "DK",
+    "iso_a3": "DNK",
+    "iso_numeric": "208",
+    "geonames_id": "2623032",
+    "name": "Denmark",
+    "region": "Northern Europe",
+    "flag": "🇩🇰"
+  },
+  {
+    "iso": "DM",
+    "iso_a3": "DMA",
+    "iso_numeric": "212",
+    "geonames_id": "3575830",
+    "name": "Dominica",
+    "region": "North America",
+    "flag": "🇩🇲"
+  },
+  {
+    "iso": "DO",
+    "iso_a3": "DOM",
+    "iso_numeric": "214",
+    "geonames_id": "3508796",
+    "name": "Dominican Republic",
+    "region": "North America",
+    "flag": "🇩🇴"
+  },
+  {
+    "iso": "DZ",
+    "iso_a3": "DZA",
+    "iso_numeric": "12",
+    "geonames_id": "2589581",
+    "name": "Algeria",
+    "region": "North Africa",
+    "flag": "🇩🇿"
+  },
+  {
+    "iso": "EC",
+    "iso_a3": "ECU",
+    "iso_numeric": "218",
+    "geonames_id": "3658394",
+    "name": "Ecuador",
+    "region": "South America",
+    "flag": "🇪🇨"
+  },
+  {
+    "iso": "EE",
+    "iso_a3": "EST",
+    "iso_numeric": "233",
+    "geonames_id": "453733",
+    "name": "Estonia",
+    "region": "Northern Europe",
+    "flag": "🇪🇪"
+  },
+  {
+    "iso": "EG",
+    "iso_a3": "EGY",
+    "iso_numeric": "818",
+    "geonames_id": "357994",
+    "name": "Egypt",
+    "region": "North Africa",
+    "flag": "🇪🇬"
+  },
+  {
+    "iso": "EH",
+    "iso_a3": "ESH",
+    "iso_numeric": "732",
+    "geonames_id": "2461445",
+    "name": "Western Sahara",
+    "region": "North Africa",
+    "flag": "🇪🇭"
+  },
+  {
+    "iso": "ER",
+    "iso_a3": "ERI",
+    "iso_numeric": "232",
+    "geonames_id": "338010",
+    "name": "Eritrea",
+    "region": "East Africa",
+    "flag": "🇪🇷"
+  },
+  {
+    "iso": "ES",
+    "iso_a3": "ESP",
+    "iso_numeric": "724",
+    "geonames_id": "2510769",
+    "name": "Spain",
+    "region": "Western Europe",
+    "flag": "🇪🇸"
+  },
+  {
+    "iso": "ET",
+    "iso_a3": "ETH",
+    "iso_numeric": "231",
+    "geonames_id": "337996",
+    "name": "Ethiopia",
+    "region": "East Africa",
+    "flag": "🇪🇹"
+  },
+  {
+    "iso": "FI",
+    "iso_a3": "FIN",
+    "iso_numeric": "246",
+    "geonames_id": "660013",
+    "name": "Finland",
+    "region": "Northern Europe",
+    "flag": "🇫🇮"
+  },
+  {
+    "iso": "FJ",
+    "iso_a3": "FJI",
+    "iso_numeric": "242",
+    "geonames_id": "2205218",
+    "name": "Fiji",
+    "region": "Aus / NZ",
+    "flag": "🇫🇯"
+  },
+  {
+    "iso": "FK",
+    "iso_a3": "FLK",
+    "iso_numeric": "238",
+    "geonames_id": "3474414",
+    "name": "Falkland Islands",
+    "region": "South America",
+    "flag": "🇫🇰"
+  },
+  {
+    "iso": "FM",
+    "iso_a3": "FSM",
+    "iso_numeric": "583",
+    "geonames_id": "2081918",
+    "name": "Micronesia",
+    "region": "Aus / NZ",
+    "flag": "🇫🇲"
+  },
+  {
+    "iso": "FO",
+    "iso_a3": "FRO",
+    "iso_numeric": "234",
+    "geonames_id": "2622320",
+    "name": "Faroe Islands",
+    "region": "Northern Europe",
+    "flag": "🇫🇴"
+  },
+  {
+    "iso": "FR",
+    "iso_a3": "FRA",
+    "iso_numeric": "250",
+    "geonames_id": "3017382",
+    "name": "France",
+    "region": "Western Europe",
+    "flag": "🇫🇷"
+  },
+  {
+    "iso": "GA",
+    "iso_a3": "GAB",
+    "iso_numeric": "266",
+    "geonames_id": "2400553",
+    "name": "Gabon",
+    "region": "Central Africa",
+    "flag": "🇬🇦"
+  },
+  {
+    "iso": "GB",
+    "iso_a3": "GBR",
+    "iso_numeric": "826",
+    "geonames_id": "2635167",
+    "name": "United Kingdom",
+    "region": "Western Europe",
+    "flag": "🇬🇧"
+  },
+  {
+    "iso": "GD",
+    "iso_a3": "GRD",
+    "iso_numeric": "308",
+    "geonames_id": "3580239",
+    "name": "Grenada",
+    "region": "North America",
+    "flag": "🇬🇩"
+  },
+  {
+    "iso": "GE",
+    "iso_a3": "GEO",
+    "iso_numeric": "268",
+    "geonames_id": "614540",
+    "name": "Georgia",
+    "region": "Eastern Europe",
+    "flag": "🇬🇪"
+  },
+  {
+    "iso": "GF",
+    "iso_a3": "GUF",
+    "iso_numeric": "254",
+    "geonames_id": "3381670",
+    "name": "French Guiana",
+    "region": "South America",
+    "flag": "🇬🇫"
+  },
+  {
+    "iso": "GG",
+    "iso_a3": "GGY",
+    "iso_numeric": "831",
+    "geonames_id": "3042362",
+    "name": "Guernsey",
+    "region": "Western Europe",
+    "flag": "🇬🇬"
+  },
+  {
+    "iso": "GH",
+    "iso_a3": "GHA",
+    "iso_numeric": "288",
+    "geonames_id": "2300660",
+    "name": "Ghana",
+    "region": "West Africa",
+    "flag": "🇬🇭"
+  },
+  {
+    "iso": "GI",
+    "iso_a3": "GIB",
+    "iso_numeric": "292",
+    "geonames_id": "2411586",
+    "name": "Gibraltar",
+    "region": "Western Europe",
+    "flag": "🇬🇮"
+  },
+  {
+    "iso": "GL",
+    "iso_a3": "GRL",
+    "iso_numeric": "304",
+    "geonames_id": "3425505",
+    "name": "Greenland",
+    "region": "Northern Europe",
+    "flag": "🇬🇱"
+  },
+  {
+    "iso": "GM",
+    "iso_a3": "GMB",
+    "iso_numeric": "270",
+    "geonames_id": "2413451",
+    "name": "Gambia",
+    "region": "West Africa",
+    "flag": "🇬🇲"
+  },
+  {
+    "iso": "GN",
+    "iso_a3": "GIN",
+    "iso_numeric": "324",
+    "geonames_id": "2420477",
+    "name": "Guinea",
+    "region": "West Africa",
+    "flag": "🇬🇳"
+  },
+  {
+    "iso": "GP",
+    "iso_a3": "GLP",
+    "iso_numeric": "312",
+    "geonames_id": "3579143",
+    "name": "Guadeloupe",
+    "region": "North America",
+    "flag": "🇬🇵"
+  },
+  {
+    "iso": "GQ",
+    "iso_a3": "GNQ",
+    "iso_numeric": "226",
+    "geonames_id": "2309096",
+    "name": "Equatorial Guinea",
+    "region": "Central Africa",
+    "flag": "🇬🇶"
+  },
+  {
+    "iso": "GR",
+    "iso_a3": "GRC",
+    "iso_numeric": "300",
+    "geonames_id": "390903",
+    "name": "Greece",
+    "region": "Western Europe",
+    "flag": "🇬🇷"
+  },
+  {
+    "iso": "GS",
+    "iso_a3": "SGS",
+    "iso_numeric": "239",
+    "geonames_id": "3474415",
+    "name": "South Georgia and the South Sandwich Islands",
+    "region": "South America",
+    "flag": "🇬🇸"
+  },
+  {
+    "iso": "GT",
+    "iso_a3": "GTM",
+    "iso_numeric": "320",
+    "geonames_id": "3595528",
+    "name": "Guatemala",
+    "region": "North America",
+    "flag": "🇬🇹"
+  },
+  {
+    "iso": "GU",
+    "iso_a3": "GUM",
+    "iso_numeric": "316",
+    "geonames_id": "4043988",
+    "name": "Guam",
+    "region": "Aus / NZ",
+    "flag": "🇬🇺"
+  },
+  {
+    "iso": "GW",
+    "iso_a3": "GNB",
+    "iso_numeric": "624",
+    "geonames_id": "2372248",
+    "name": "Guinea-Bissau",
+    "region": "West Africa",
+    "flag": "🇬🇼"
+  },
+  {
+    "iso": "GY",
+    "iso_a3": "GUY",
+    "iso_numeric": "328",
+    "geonames_id": "3378535",
+    "name": "Guyana",
+    "region": "South America",
+    "flag": "🇬🇾"
+  },
+  {
+    "iso": "HK",
+    "iso_a3": "HKG",
+    "iso_numeric": "344",
+    "geonames_id": "1819730",
+    "name": "Hong Kong",
+    "region": "East Asia",
+    "flag": "🇭🇰"
+  },
+  {
+    "iso": "HM",
+    "iso_a3": "HMD",
+    "iso_numeric": "334",
+    "geonames_id": "1547314",
+    "name": "Heard Island and McDonald Islands",
+    "region": "Aus / NZ",
+    "flag": "🇭🇲"
+  },
+  {
+    "iso": "HN",
+    "iso_a3": "HND",
+    "iso_numeric": "340",
+    "geonames_id": "3608932",
+    "name": "Honduras",
+    "region": "North America",
+    "flag": "🇭🇳"
+  },
+  {
+    "iso": "HR",
+    "iso_a3": "HRV",
+    "iso_numeric": "191",
+    "geonames_id": "3202326",
+    "name": "Croatia",
+    "region": "Western Europe",
+    "flag": "🇭🇷"
+  },
+  {
+    "iso": "HT",
+    "iso_a3": "HTI",
+    "iso_numeric": "332",
+    "geonames_id": "3723988",
+    "name": "Haiti",
+    "region": "North America",
+    "flag": "🇭🇹"
+  },
+  {
+    "iso": "HU",
+    "iso_a3": "HUN",
+    "iso_numeric": "348",
+    "geonames_id": "719819",
+    "name": "Hungary",
+    "region": "Eastern Europe",
+    "flag": "🇭🇺"
+  },
+  {
+    "iso": "ID",
+    "iso_a3": "IDN",
+    "iso_numeric": "360",
+    "geonames_id": "1643084",
+    "name": "Indonesia",
+    "region": "East Asia",
+    "flag": "🇮🇩"
+  },
+  {
+    "iso": "IE",
+    "iso_a3": "IRL",
+    "iso_numeric": "372",
+    "geonames_id": "2963597",
+    "name": "Ireland",
+    "region": "Western Europe",
+    "flag": "🇮🇪"
+  },
+  {
+    "iso": "IL",
+    "iso_a3": "ISR",
+    "iso_numeric": "376",
+    "geonames_id": "294640",
+    "name": "Israel",
+    "region": "Middle East",
+    "flag": "🇮🇱"
+  },
+  {
+    "iso": "IM",
+    "iso_a3": "IMN",
+    "iso_numeric": "833",
+    "geonames_id": "3042225",
+    "name": "Isle of Man",
+    "region": "Western Europe",
+    "flag": "🇮🇲"
+  },
+  {
+    "iso": "IN",
+    "iso_a3": "IND",
+    "iso_numeric": "356",
+    "geonames_id": "1269750",
+    "name": "India",
+    "region": "South Asia",
+    "flag": "🇮🇳"
+  },
+  {
+    "iso": "IO",
+    "iso_a3": "IOT",
+    "iso_numeric": "86",
+    "geonames_id": "1282588",
+    "name": "British Indian Ocean Territory",
+    "region": "South Asia",
+    "flag": "🇮🇴"
+  },
+  {
+    "iso": "IQ",
+    "iso_a3": "IRQ",
+    "iso_numeric": "368",
+    "geonames_id": "99237",
+    "name": "Iraq",
+    "region": "Middle East",
+    "flag": "🇮🇶"
+  },
+  {
+    "iso": "IR",
+    "iso_a3": "IRN",
+    "iso_numeric": "364",
+    "geonames_id": "130758",
+    "name": "Iran",
+    "region": "Middle East",
+    "flag": "🇮🇷"
+  },
+  {
+    "iso": "IS",
+    "iso_a3": "ISL",
+    "iso_numeric": "352",
+    "geonames_id": "2629691",
+    "name": "Iceland",
+    "region": "Northern Europe",
+    "flag": "🇮🇸"
+  },
+  {
+    "iso": "IT",
+    "iso_a3": "ITA",
+    "iso_numeric": "380",
+    "geonames_id": "3175395",
+    "name": "Italy",
+    "region": "Western Europe",
+    "flag": "🇮🇹"
+  },
+  {
+    "iso": "JE",
+    "iso_a3": "JEY",
+    "iso_numeric": "832",
+    "geonames_id": "3042142",
+    "name": "Jersey",
+    "region": "Western Europe",
+    "flag": "🇯🇪"
+  },
+  {
+    "iso": "JM",
+    "iso_a3": "JAM",
+    "iso_numeric": "388",
+    "geonames_id": "3489940",
+    "name": "Jamaica",
+    "region": "North America",
+    "flag": "🇯🇲"
+  },
+  {
+    "iso": "JO",
+    "iso_a3": "JOR",
+    "iso_numeric": "400",
+    "geonames_id": "248816",
+    "name": "Jordan",
+    "region": "Middle East",
+    "flag": "🇯🇴"
+  },
+  {
+    "iso": "JP",
+    "iso_a3": "JPN",
+    "iso_numeric": "392",
+    "geonames_id": "1861060",
+    "name": "Japan",
+    "region": "East Asia",
+    "flag": "🇯🇵"
+  },
+  {
+    "iso": "KE",
+    "iso_a3": "KEN",
+    "iso_numeric": "404",
+    "geonames_id": "192950",
+    "name": "Kenya",
+    "region": "East Africa",
+    "flag": "🇰🇪"
+  },
+  {
+    "iso": "KG",
+    "iso_a3": "KGZ",
+    "iso_numeric": "417",
+    "geonames_id": "1527747",
+    "name": "Kyrgyzstan",
+    "region": "Central Asia",
+    "flag": "🇰🇬"
+  },
+  {
+    "iso": "KH",
+    "iso_a3": "KHM",
+    "iso_numeric": "116",
+    "geonames_id": "1831722",
+    "name": "Cambodia",
+    "region": "East Asia",
+    "flag": "🇰🇭"
+  },
+  {
+    "iso": "KI",
+    "iso_a3": "KIR",
+    "iso_numeric": "296",
+    "geonames_id": "4030945",
+    "name": "Kiribati",
+    "region": "Aus / NZ",
+    "flag": "🇰🇮"
+  },
+  {
+    "iso": "KM",
+    "iso_a3": "COM",
+    "iso_numeric": "174",
+    "geonames_id": "921929",
+    "name": "Comoros",
+    "region": "East Africa",
+    "flag": "🇰🇲"
+  },
+  {
+    "iso": "KN",
+    "iso_a3": "KNA",
+    "iso_numeric": "659",
+    "geonames_id": "3575174",
+    "name": "Saint Kitts and Nevis",
+    "region": "North America",
+    "flag": "🇰🇳"
+  },
+  {
+    "iso": "KP",
+    "iso_a3": "PRK",
+    "iso_numeric": "408",
+    "geonames_id": "1873107",
+    "name": "North Korea",
+    "region": "East Asia",
+    "flag": "🇰🇵"
+  },
+  {
+    "iso": "KR",
+    "iso_a3": "KOR",
+    "iso_numeric": "410",
+    "geonames_id": "1835841",
+    "name": "South Korea",
+    "region": "East Asia",
+    "flag": "🇰🇷"
+  },
+  {
+    "iso": "XK",
+    "iso_a3": "XKX",
+    "iso_numeric": "0",
+    "geonames_id": "831053",
+    "name": "Kosovo",
+    "region": "Western Europe",
+    "flag": ""
+  },
+  {
+    "iso": "KW",
+    "iso_a3": "KWT",
+    "iso_numeric": "414",
+    "geonames_id": "285570",
+    "name": "Kuwait",
+    "region": "Middle East",
+    "flag": "🇰🇼"
+  },
+  {
+    "iso": "KY",
+    "iso_a3": "CYM",
+    "iso_numeric": "136",
+    "geonames_id": "3580718",
+    "name": "Cayman Islands",
+    "region": "North America",
+    "flag": "🇰🇾"
+  },
+  {
+    "iso": "KZ",
+    "iso_a3": "KAZ",
+    "iso_numeric": "398",
+    "geonames_id": "1522867",
+    "name": "Kazakhstan",
+    "region": "Central Asia",
+    "flag": "🇰🇿"
+  },
+  {
+    "iso": "LA",
+    "iso_a3": "LAO",
+    "iso_numeric": "418",
+    "geonames_id": "1655842",
+    "name": "Laos",
+    "region": "East Asia",
+    "flag": "🇱🇦"
+  },
+  {
+    "iso": "LB",
+    "iso_a3": "LBN",
+    "iso_numeric": "422",
+    "geonames_id": "272103",
+    "name": "Lebanon",
+    "region": "Middle East",
+    "flag": "🇱🇧"
+  },
+  {
+    "iso": "LC",
+    "iso_a3": "LCA",
+    "iso_numeric": "662",
+    "geonames_id": "3576468",
+    "name": "Saint Lucia",
+    "region": "North America",
+    "flag": "🇱🇨"
+  },
+  {
+    "iso": "LI",
+    "iso_a3": "LIE",
+    "iso_numeric": "438",
+    "geonames_id": "3042058",
+    "name": "Liechtenstein",
+    "region": "Western Europe",
+    "flag": "🇱🇮"
+  },
+  {
+    "iso": "LK",
+    "iso_a3": "LKA",
+    "iso_numeric": "144",
+    "geonames_id": "1227603",
+    "name": "Sri Lanka",
+    "region": "South Asia",
+    "flag": "🇱🇰"
+  },
+  {
+    "iso": "LR",
+    "iso_a3": "LBR",
+    "iso_numeric": "430",
+    "geonames_id": "2275384",
+    "name": "Liberia",
+    "region": "West Africa",
+    "flag": "🇱🇷"
+  },
+  {
+    "iso": "LS",
+    "iso_a3": "LSO",
+    "iso_numeric": "426",
+    "geonames_id": "932692",
+    "name": "Lesotho",
+    "region": "Southern Africa",
+    "flag": "🇱🇸"
+  },
+  {
+    "iso": "LT",
+    "iso_a3": "LTU",
+    "iso_numeric": "440",
+    "geonames_id": "597427",
+    "name": "Lithuania",
+    "region": "Eastern Europe",
+    "flag": "🇱🇹"
+  },
+  {
+    "iso": "LU",
+    "iso_a3": "LUX",
+    "iso_numeric": "442",
+    "geonames_id": "2960313",
+    "name": "Luxembourg",
+    "region": "Western Europe",
+    "flag": "🇱🇺"
+  },
+  {
+    "iso": "LV",
+    "iso_a3": "LVA",
+    "iso_numeric": "428",
+    "geonames_id": "458258",
+    "name": "Latvia",
+    "region": "Northern Europe",
+    "flag": "🇱🇻"
+  },
+  {
+    "iso": "LY",
+    "iso_a3": "LBY",
+    "iso_numeric": "434",
+    "geonames_id": "2215636",
+    "name": "Libya",
+    "region": "North Africa",
+    "flag": "🇱🇾"
+  },
+  {
+    "iso": "MA",
+    "iso_a3": "MAR",
+    "iso_numeric": "504",
+    "geonames_id": "2542007",
+    "name": "Morocco",
+    "region": "North Africa",
+    "flag": "🇲🇦"
+  },
+  {
+    "iso": "MC",
+    "iso_a3": "MCO",
+    "iso_numeric": "492",
+    "geonames_id": "2993457",
+    "name": "Monaco",
+    "region": "Western Europe",
+    "flag": "🇲🇨"
+  },
+  {
+    "iso": "MD",
+    "iso_a3": "MDA",
+    "iso_numeric": "498",
+    "geonames_id": "617790",
+    "name": "Moldova",
+    "region": "Eastern Europe",
+    "flag": "🇲🇩"
+  },
+  {
+    "iso": "ME",
+    "iso_a3": "MNE",
+    "iso_numeric": "499",
+    "geonames_id": "3194884",
+    "name": "Montenegro",
+    "region": "Western Europe",
+    "flag": "🇲🇪"
+  },
+  {
+    "iso": "MF",
+    "iso_a3": "MAF",
+    "iso_numeric": "663",
+    "geonames_id": "3578421",
+    "name": "Saint Martin",
+    "region": "North America",
+    "flag": "🇲🇫"
+  },
+  {
+    "iso": "MG",
+    "iso_a3": "MDG",
+    "iso_numeric": "450",
+    "geonames_id": "1062947",
+    "name": "Madagascar",
+    "region": "Southern Africa",
+    "flag": "🇲🇬"
+  },
+  {
+    "iso": "MH",
+    "iso_a3": "MHL",
+    "iso_numeric": "584",
+    "geonames_id": "2080185",
+    "name": "Marshall Islands",
+    "region": "Aus / NZ",
+    "flag": "🇲🇭"
+  },
+  {
+    "iso": "MK",
+    "iso_a3": "MKD",
+    "iso_numeric": "807",
+    "geonames_id": "718075",
+    "name": "Macedonia",
+    "region": "Western Europe",
+    "flag": "🇲🇰"
+  },
+  {
+    "iso": "ML",
+    "iso_a3": "MLI",
+    "iso_numeric": "466",
+    "geonames_id": "2453866",
+    "name": "Mali",
+    "region": "West Africa",
+    "flag": "🇲🇱"
+  },
+  {
+    "iso": "MM",
+    "iso_a3": "MMR",
+    "iso_numeric": "104",
+    "geonames_id": "1327865",
+    "name": "Myanmar",
+    "region": "East Asia",
+    "flag": "🇲🇲"
+  },
+  {
+    "iso": "MN",
+    "iso_a3": "MNG",
+    "iso_numeric": "496",
+    "geonames_id": "2029969",
+    "name": "Mongolia",
+    "region": "East Asia",
+    "flag": "🇲🇳"
+  },
+  {
+    "iso": "MO",
+    "iso_a3": "MAC",
+    "iso_numeric": "446",
+    "geonames_id": "1821275",
+    "name": "Macao",
+    "region": "East Asia",
+    "flag": "🇲🇴"
+  },
+  {
+    "iso": "MP",
+    "iso_a3": "MNP",
+    "iso_numeric": "580",
+    "geonames_id": "4041468",
+    "name": "Northern Mariana Islands",
+    "region": "Aus / NZ",
+    "flag": "🇲🇵"
+  },
+  {
+    "iso": "MQ",
+    "iso_a3": "MTQ",
+    "iso_numeric": "474",
+    "geonames_id": "3570311",
+    "name": "Martinique",
+    "region": "North America",
+    "flag": "🇲🇶"
+  },
+  {
+    "iso": "MR",
+    "iso_a3": "MRT",
+    "iso_numeric": "478",
+    "geonames_id": "2378080",
+    "name": "Mauritania",
+    "region": "North Africa",
+    "flag": "🇲🇷"
+  },
+  {
+    "iso": "MS",
+    "iso_a3": "MSR",
+    "iso_numeric": "500",
+    "geonames_id": "3578097",
+    "name": "Montserrat",
+    "region": "North America",
+    "flag": "🇲🇸"
+  },
+  {
+    "iso": "MT",
+    "iso_a3": "MLT",
+    "iso_numeric": "470",
+    "geonames_id": "2562770",
+    "name": "Malta",
+    "region": "Western Europe",
+    "flag": "🇲🇹"
+  },
+  {
+    "iso": "MU",
+    "iso_a3": "MUS",
+    "iso_numeric": "480",
+    "geonames_id": "934292",
+    "name": "Mauritius",
+    "region": "Southern Africa",
+    "flag": "🇲🇺"
+  },
+  {
+    "iso": "MV",
+    "iso_a3": "MDV",
+    "iso_numeric": "462",
+    "geonames_id": "1282028",
+    "name": "Maldives",
+    "region": "South Asia",
+    "flag": "🇲🇻"
+  },
+  {
+    "iso": "MW",
+    "iso_a3": "MWI",
+    "iso_numeric": "454",
+    "geonames_id": "927384",
+    "name": "Malawi",
+    "region": "Southern Africa",
+    "flag": "🇲🇼"
+  },
+  {
+    "iso": "MX",
+    "iso_a3": "MEX",
+    "iso_numeric": "484",
+    "geonames_id": "3996063",
+    "name": "Mexico",
+    "region": "North America",
+    "flag": "🇲🇽"
+  },
+  {
+    "iso": "MY",
+    "iso_a3": "MYS",
+    "iso_numeric": "458",
+    "geonames_id": "1733045",
+    "name": "Malaysia",
+    "region": "East Asia",
+    "flag": "🇲🇾"
+  },
+  {
+    "iso": "MZ",
+    "iso_a3": "MOZ",
+    "iso_numeric": "508",
+    "geonames_id": "1036973",
+    "name": "Mozambique",
+    "region": "Southern Africa",
+    "flag": "🇲🇿"
+  },
+  {
+    "iso": "NA",
+    "iso_a3": "NAM",
+    "iso_numeric": "516",
+    "geonames_id": "3355338",
+    "name": "Namibia",
+    "region": "Southern Africa",
+    "flag": "🇳🇦"
+  },
+  {
+    "iso": "NC",
+    "iso_a3": "NCL",
+    "iso_numeric": "540",
+    "geonames_id": "2139685",
+    "name": "New Caledonia",
+    "region": "Aus / NZ",
+    "flag": "🇳🇨"
+  },
+  {
+    "iso": "NE",
+    "iso_a3": "NER",
+    "iso_numeric": "562",
+    "geonames_id": "2440476",
+    "name": "Niger",
+    "region": "West Africa",
+    "flag": "🇳🇪"
+  },
+  {
+    "iso": "NF",
+    "iso_a3": "NFK",
+    "iso_numeric": "574",
+    "geonames_id": "2155115",
+    "name": "Norfolk Island",
+    "region": "Aus / NZ",
+    "flag": "🇳🇫"
+  },
+  {
+    "iso": "NG",
+    "iso_a3": "NGA",
+    "iso_numeric": "566",
+    "geonames_id": "2328926",
+    "name": "Nigeria",
+    "region": "West Africa",
+    "flag": "🇳🇬"
+  },
+  {
+    "iso": "NI",
+    "iso_a3": "NIC",
+    "iso_numeric": "558",
+    "geonames_id": "3617476",
+    "name": "Nicaragua",
+    "region": "North America",
+    "flag": "🇳🇮"
+  },
+  {
+    "iso": "NL",
+    "iso_a3": "NLD",
+    "iso_numeric": "528",
+    "geonames_id": "2750405",
+    "name": "Netherlands",
+    "region": "Western Europe",
+    "flag": "🇳🇱"
+  },
+  {
+    "iso": "NO",
+    "iso_a3": "NOR",
+    "iso_numeric": "578",
+    "geonames_id": "3144096",
+    "name": "Norway",
+    "region": "Northern Europe",
+    "flag": "🇳🇴"
+  },
+  {
+    "iso": "NP",
+    "iso_a3": "NPL",
+    "iso_numeric": "524",
+    "geonames_id": "1282988",
+    "name": "Nepal",
+    "region": "South Asia",
+    "flag": "🇳🇵"
+  },
+  {
+    "iso": "NR",
+    "iso_a3": "NRU",
+    "iso_numeric": "520",
+    "geonames_id": "2110425",
+    "name": "Nauru",
+    "region": "Aus / NZ",
+    "flag": "🇳🇷"
+  },
+  {
+    "iso": "NU",
+    "iso_a3": "NIU",
+    "iso_numeric": "570",
+    "geonames_id": "4036232",
+    "name": "Niue",
+    "region": "Aus / NZ",
+    "flag": "🇳🇺"
+  },
+  {
+    "iso": "NZ",
+    "iso_a3": "NZL",
+    "iso_numeric": "554",
+    "geonames_id": "2186224",
+    "name": "New Zealand",
+    "region": "Aus / NZ",
+    "flag": "🇳🇿"
+  },
+  {
+    "iso": "OM",
+    "iso_a3": "OMN",
+    "iso_numeric": "512",
+    "geonames_id": "286963",
+    "name": "Oman",
+    "region": "Middle East",
+    "flag": "🇴🇲"
+  },
+  {
+    "iso": "PA",
+    "iso_a3": "PAN",
+    "iso_numeric": "591",
+    "geonames_id": "3703430",
+    "name": "Panama",
+    "region": "North America",
+    "flag": "🇵🇦"
+  },
+  {
+    "iso": "PE",
+    "iso_a3": "PER",
+    "iso_numeric": "604",
+    "geonames_id": "3932488",
+    "name": "Peru",
+    "region": "South America",
+    "flag": "🇵🇪"
+  },
+  {
+    "iso": "PF",
+    "iso_a3": "PYF",
+    "iso_numeric": "258",
+    "geonames_id": "4030656",
+    "name": "French Polynesia",
+    "region": "Aus / NZ",
+    "flag": "🇵🇫"
+  },
+  {
+    "iso": "PG",
+    "iso_a3": "PNG",
+    "iso_numeric": "598",
+    "geonames_id": "2088628",
+    "name": "Papua New Guinea",
+    "region": "Aus / NZ",
+    "flag": "🇵🇬"
+  },
+  {
+    "iso": "PH",
+    "iso_a3": "PHL",
+    "iso_numeric": "608",
+    "geonames_id": "1694008",
+    "name": "Philippines",
+    "region": "East Asia",
+    "flag": "🇵🇭"
+  },
+  {
+    "iso": "PK",
+    "iso_a3": "PAK",
+    "iso_numeric": "586",
+    "geonames_id": "1168579",
+    "name": "Pakistan",
+    "region": "South Asia",
+    "flag": "🇵🇰"
+  },
+  {
+    "iso": "PL",
+    "iso_a3": "POL",
+    "iso_numeric": "616",
+    "geonames_id": "798544",
+    "name": "Poland",
+    "region": "Eastern Europe",
+    "flag": "🇵🇱"
+  },
+  {
+    "iso": "PM",
+    "iso_a3": "SPM",
+    "iso_numeric": "666",
+    "geonames_id": "3424932",
+    "name": "Saint Pierre and Miquelon",
+    "region": "North America",
+    "flag": "🇵🇲"
+  },
+  {
+    "iso": "PN",
+    "iso_a3": "PCN",
+    "iso_numeric": "612",
+    "geonames_id": "4030699",
+    "name": "Pitcairn",
+    "region": "Aus / NZ",
+    "flag": "🇵🇳"
+  },
+  {
+    "iso": "PR",
+    "iso_a3": "PRI",
+    "iso_numeric": "630",
+    "geonames_id": "4566966",
+    "name": "Puerto Rico",
+    "region": "North America",
+    "flag": "🇵🇷"
+  },
+  {
+    "iso": "PS",
+    "iso_a3": "PSE",
+    "iso_numeric": "275",
+    "geonames_id": "6254930",
+    "name": "Palestinian Territory",
+    "region": "Middle East",
+    "flag": "🇵🇸"
+  },
+  {
+    "iso": "PT",
+    "iso_a3": "PRT",
+    "iso_numeric": "620",
+    "geonames_id": "2264397",
+    "name": "Portugal",
+    "region": "Western Europe",
+    "flag": "🇵🇹"
+  },
+  {
+    "iso": "PW",
+    "iso_a3": "PLW",
+    "iso_numeric": "585",
+    "geonames_id": "1559582",
+    "name": "Palau",
+    "region": "Aus / NZ",
+    "flag": "🇵🇼"
+  },
+  {
+    "iso": "PY",
+    "iso_a3": "PRY",
+    "iso_numeric": "600",
+    "geonames_id": "3437598",
+    "name": "Paraguay",
+    "region": "South America",
+    "flag": "🇵🇾"
+  },
+  {
+    "iso": "QA",
+    "iso_a3": "QAT",
+    "iso_numeric": "634",
+    "geonames_id": "289688",
+    "name": "Qatar",
+    "region": "Middle East",
+    "flag": "🇶🇦"
+  },
+  {
+    "iso": "RE",
+    "iso_a3": "REU",
+    "iso_numeric": "638",
+    "geonames_id": "935317",
+    "name": "Reunion",
+    "region": "Southern Africa",
+    "flag": "🇷🇪"
+  },
+  {
+    "iso": "RO",
+    "iso_a3": "ROU",
+    "iso_numeric": "642",
+    "geonames_id": "798549",
+    "name": "Romania",
+    "region": "Eastern Europe",
+    "flag": "🇷🇴"
+  },
+  {
+    "iso": "RS",
+    "iso_a3": "SRB",
+    "iso_numeric": "688",
+    "geonames_id": "6290252",
+    "name": "Serbia",
+    "region": "Western Europe",
+    "flag": "🇷🇸"
+  },
+  {
+    "iso": "RU",
+    "iso_a3": "RUS",
+    "iso_numeric": "643",
+    "geonames_id": "2017370",
+    "name": "Russia",
+    "region": "Russia",
+    "flag": "🇷🇺"
+  },
+  {
+    "iso": "RW",
+    "iso_a3": "RWA",
+    "iso_numeric": "646",
+    "geonames_id": "49518",
+    "name": "Rwanda",
+    "region": "East Africa",
+    "flag": "🇷🇼"
+  },
+  {
+    "iso": "SA",
+    "iso_a3": "SAU",
+    "iso_numeric": "682",
+    "geonames_id": "102358",
+    "name": "Saudi Arabia",
+    "region": "Middle East",
+    "flag": "🇸🇦"
+  },
+  {
+    "iso": "SB",
+    "iso_a3": "SLB",
+    "iso_numeric": "90",
+    "geonames_id": "2103350",
+    "name": "Solomon Islands",
+    "region": "Aus / NZ",
+    "flag": "🇸🇧"
+  },
+  {
+    "iso": "SC",
+    "iso_a3": "SYC",
+    "iso_numeric": "690",
+    "geonames_id": "241170",
+    "name": "Seychelles",
+    "region": "Southern Africa",
+    "flag": "🇸🇨"
+  },
+  {
+    "iso": "SD",
+    "iso_a3": "SDN",
+    "iso_numeric": "729",
+    "geonames_id": "366755",
+    "name": "Sudan",
+    "region": "North Africa",
+    "flag": "🇸🇩"
+  },
+  {
+    "iso": "SS",
+    "iso_a3": "SSD",
+    "iso_numeric": "728",
+    "geonames_id": "7909807",
+    "name": "South Sudan",
+    "region": "North Africa",
+    "flag": "🇸🇸"
+  },
+  {
+    "iso": "SE",
+    "iso_a3": "SWE",
+    "iso_numeric": "752",
+    "geonames_id": "2661886",
+    "name": "Sweden",
+    "region": "Northern Europe",
+    "flag": "🇸🇪"
+  },
+  {
+    "iso": "SG",
+    "iso_a3": "SGP",
+    "iso_numeric": "702",
+    "geonames_id": "1880251",
+    "name": "Singapore",
+    "region": "East Asia",
+    "flag": "🇸🇬"
+  },
+  {
+    "iso": "SH",
+    "iso_a3": "SHN",
+    "iso_numeric": "654",
+    "geonames_id": "3370751",
+    "name": "Saint Helena",
+    "region": "Southern Africa",
+    "flag": "🇸🇭"
+  },
+  {
+    "iso": "SI",
+    "iso_a3": "SVN",
+    "iso_numeric": "705",
+    "geonames_id": "3190538",
+    "name": "Slovenia",
+    "region": "Western Europe",
+    "flag": "🇸🇮"
+  },
+  {
+    "iso": "SJ",
+    "iso_a3": "SJM",
+    "iso_numeric": "744",
+    "geonames_id": "607072",
+    "name": "Svalbard and Jan Mayen",
+    "region": "Northern Europe",
+    "flag": "🇸🇯"
+  },
+  {
+    "iso": "SK",
+    "iso_a3": "SVK",
+    "iso_numeric": "703",
+    "geonames_id": "3057568",
+    "name": "Slovakia",
+    "region": "Eastern Europe",
+    "flag": "🇸🇰"
+  },
+  {
+    "iso": "SL",
+    "iso_a3": "SLE",
+    "iso_numeric": "694",
+    "geonames_id": "2403846",
+    "name": "Sierra Leone",
+    "region": "West Africa",
+    "flag": "🇸🇱"
+  },
+  {
+    "iso": "SM",
+    "iso_a3": "SMR",
+    "iso_numeric": "674",
+    "geonames_id": "3168068",
+    "name": "San Marino",
+    "region": "Western Europe",
+    "flag": "🇸🇲"
+  },
+  {
+    "iso": "SN",
+    "iso_a3": "SEN",
+    "iso_numeric": "686",
+    "geonames_id": "2245662",
+    "name": "Senegal",
+    "region": "West Africa",
+    "flag": "🇸🇳"
+  },
+  {
+    "iso": "SO",
+    "iso_a3": "SOM",
+    "iso_numeric": "706",
+    "geonames_id": "51537",
+    "name": "Somalia",
+    "region": "East Africa",
+    "flag": "🇸🇴"
+  },
+  {
+    "iso": "SR",
+    "iso_a3": "SUR",
+    "iso_numeric": "740",
+    "geonames_id": "3382998",
+    "name": "Suriname",
+    "region": "South America",
+    "flag": "🇸🇷"
+  },
+  {
+    "iso": "ST",
+    "iso_a3": "STP",
+    "iso_numeric": "678",
+    "geonames_id": "2410758",
+    "name": "Sao Tome and Principe",
+    "region": "Central Africa",
+    "flag": "🇸🇹"
+  },
+  {
+    "iso": "SV",
+    "iso_a3": "SLV",
+    "iso_numeric": "222",
+    "geonames_id": "3585968",
+    "name": "El Salvador",
+    "region": "North America",
+    "flag": "🇸🇻"
+  },
+  {
+    "iso": "SX",
+    "iso_a3": "SXM",
+    "iso_numeric": "534",
+    "geonames_id": "7609695",
+    "name": "Sint Maarten",
+    "region": "North America",
+    "flag": "🇸🇽"
+  },
+  {
+    "iso": "SY",
+    "iso_a3": "SYR",
+    "iso_numeric": "760",
+    "geonames_id": "163843",
+    "name": "Syria",
+    "region": "Middle East",
+    "flag": "🇸🇾"
+  },
+  {
+    "iso": "SZ",
+    "iso_a3": "SWZ",
+    "iso_numeric": "748",
+    "geonames_id": "934841",
+    "name": "Swaziland",
+    "region": "Southern Africa",
+    "flag": "🇸🇿"
+  },
+  {
+    "iso": "TC",
+    "iso_a3": "TCA",
+    "iso_numeric": "796",
+    "geonames_id": "3576916",
+    "name": "Turks and Caicos Islands",
+    "region": "North America",
+    "flag": "🇹🇨"
+  },
+  {
+    "iso": "TD",
+    "iso_a3": "TCD",
+    "iso_numeric": "148",
+    "geonames_id": "2434508",
+    "name": "Chad",
+    "region": "Central Africa",
+    "flag": "🇹🇩"
+  },
+  {
+    "iso": "TF",
+    "iso_a3": "ATF",
+    "iso_numeric": "260",
+    "geonames_id": "1546748",
+    "name": "French Southern Territories",
+    "region": "Antarctica",
+    "flag": "🇹🇫"
+  },
+  {
+    "iso": "TG",
+    "iso_a3": "TGO",
+    "iso_numeric": "768",
+    "geonames_id": "2363686",
+    "name": "Togo",
+    "region": "West Africa",
+    "flag": "🇹🇬"
+  },
+  {
+    "iso": "TH",
+    "iso_a3": "THA",
+    "iso_numeric": "764",
+    "geonames_id": "1605651",
+    "name": "Thailand",
+    "region": "East Asia",
+    "flag": "🇹🇭"
+  },
+  {
+    "iso": "TJ",
+    "iso_a3": "TJK",
+    "iso_numeric": "762",
+    "geonames_id": "1220409",
+    "name": "Tajikistan",
+    "region": "Central Asia",
+    "flag": "🇹🇯"
+  },
+  {
+    "iso": "TK",
+    "iso_a3": "TKL",
+    "iso_numeric": "772",
+    "geonames_id": "4031074",
+    "name": "Tokelau",
+    "region": "Aus / NZ",
+    "flag": "🇹🇰"
+  },
+  {
+    "iso": "TL",
+    "iso_a3": "TLS",
+    "iso_numeric": "626",
+    "geonames_id": "1966436",
+    "name": "East Timor",
+    "region": "East Asia",
+    "flag": "🇹🇱"
+  },
+  {
+    "iso": "TM",
+    "iso_a3": "TKM",
+    "iso_numeric": "795",
+    "geonames_id": "1218197",
+    "name": "Turkmenistan",
+    "region": "Central Asia",
+    "flag": "🇹🇲"
+  },
+  {
+    "iso": "TN",
+    "iso_a3": "TUN",
+    "iso_numeric": "788",
+    "geonames_id": "2464461",
+    "name": "Tunisia",
+    "region": "North Africa",
+    "flag": "🇹🇳"
+  },
+  {
+    "iso": "TO",
+    "iso_a3": "TON",
+    "iso_numeric": "776",
+    "geonames_id": "4032283",
+    "name": "Tonga",
+    "region": "Aus / NZ",
+    "flag": "🇹🇴"
+  },
+  {
+    "iso": "TR",
+    "iso_a3": "TUR",
+    "iso_numeric": "792",
+    "geonames_id": "298795",
+    "name": "Turkey",
+    "region": "Middle East",
+    "flag": "🇹🇷"
+  },
+  {
+    "iso": "TT",
+    "iso_a3": "TTO",
+    "iso_numeric": "780",
+    "geonames_id": "3573591",
+    "name": "Trinidad and Tobago",
+    "region": "North America",
+    "flag": "🇹🇹"
+  },
+  {
+    "iso": "TV",
+    "iso_a3": "TUV",
+    "iso_numeric": "798",
+    "geonames_id": "2110297",
+    "name": "Tuvalu",
+    "region": "Aus / NZ",
+    "flag": "🇹🇻"
+  },
+  {
+    "iso": "TW",
+    "iso_a3": "TWN",
+    "iso_numeric": "158",
+    "geonames_id": "1668284",
+    "name": "Taiwan",
+    "region": "East Asia",
+    "flag": "🇹🇼"
+  },
+  {
+    "iso": "TZ",
+    "iso_a3": "TZA",
+    "iso_numeric": "834",
+    "geonames_id": "149590",
+    "name": "Tanzania",
+    "region": "East Africa",
+    "flag": "🇹🇿"
+  },
+  {
+    "iso": "UA",
+    "iso_a3": "UKR",
+    "iso_numeric": "804",
+    "geonames_id": "690791",
+    "name": "Ukraine",
+    "region": "Eastern Europe",
+    "flag": "🇺🇦"
+  },
+  {
+    "iso": "UG",
+    "iso_a3": "UGA",
+    "iso_numeric": "800",
+    "geonames_id": "226074",
+    "name": "Uganda",
+    "region": "East Africa",
+    "flag": "🇺🇬"
+  },
+  {
+    "iso": "UM",
+    "iso_a3": "UMI",
+    "iso_numeric": "581",
+    "geonames_id": "5854968",
+    "name": "United States Minor Outlying Islands",
+    "region": "North America",
+    "flag": "🇺🇲"
+  },
+  {
+    "iso": "US",
+    "iso_a3": "USA",
+    "iso_numeric": "840",
+    "geonames_id": "6252001",
+    "name": "United States",
+    "region": "North America",
+    "flag": "🇺🇸"
+  },
+  {
+    "iso": "UY",
+    "iso_a3": "URY",
+    "iso_numeric": "858",
+    "geonames_id": "3439705",
+    "name": "Uruguay",
+    "region": "South America",
+    "flag": "🇺🇾"
+  },
+  {
+    "iso": "UZ",
+    "iso_a3": "UZB",
+    "iso_numeric": "860",
+    "geonames_id": "1512440",
+    "name": "Uzbekistan",
+    "region": "Central Asia",
+    "flag": "🇺🇿"
+  },
+  {
+    "iso": "VA",
+    "iso_a3": "VAT",
+    "iso_numeric": "336",
+    "geonames_id": "3164670",
+    "name": "Vatican",
+    "region": "Western Europe",
+    "flag": "🇻🇦"
+  },
+  {
+    "iso": "VC",
+    "iso_a3": "VCT",
+    "iso_numeric": "670",
+    "geonames_id": "3577815",
+    "name": "Saint Vincent and the Grenadines",
+    "region": "North America",
+    "flag": "🇻🇨"
+  },
+  {
+    "iso": "VE",
+    "iso_a3": "VEN",
+    "iso_numeric": "862",
+    "geonames_id": "3625428",
+    "name": "Venezuela",
+    "region": "South America",
+    "flag": "🇻🇪"
+  },
+  {
+    "iso": "VG",
+    "iso_a3": "VGB",
+    "iso_numeric": "92",
+    "geonames_id": "3577718",
+    "name": "British Virgin Islands",
+    "region": "North America",
+    "flag": "🇻🇬"
+  },
+  {
+    "iso": "VI",
+    "iso_a3": "VIR",
+    "iso_numeric": "850",
+    "geonames_id": "4796775",
+    "name": "U.S. Virgin Islands",
+    "region": "North America",
+    "flag": "🇻🇮"
+  },
+  {
+    "iso": "VN",
+    "iso_a3": "VNM",
+    "iso_numeric": "704",
+    "geonames_id": "1562822",
+    "name": "Vietnam",
+    "region": "East Asia",
+    "flag": "🇻🇳"
+  },
+  {
+    "iso": "VU",
+    "iso_a3": "VUT",
+    "iso_numeric": "548",
+    "geonames_id": "2134431",
+    "name": "Vanuatu",
+    "region": "Aus / NZ",
+    "flag": "🇻🇺"
+  },
+  {
+    "iso": "WF",
+    "iso_a3": "WLF",
+    "iso_numeric": "876",
+    "geonames_id": "4034749",
+    "name": "Wallis and Futuna",
+    "region": "Aus / NZ",
+    "flag": "🇼🇫"
+  },
+  {
+    "iso": "WS",
+    "iso_a3": "WSM",
+    "iso_numeric": "882",
+    "geonames_id": "4034894",
+    "name": "Samoa",
+    "region": "Aus / NZ",
+    "flag": "🇼🇸"
+  },
+  {
+    "iso": "YE",
+    "iso_a3": "YEM",
+    "iso_numeric": "887",
+    "geonames_id": "69543",
+    "name": "Yemen",
+    "region": "Middle East",
+    "flag": "🇾🇪"
+  },
+  {
+    "iso": "YT",
+    "iso_a3": "MYT",
+    "iso_numeric": "175",
+    "geonames_id": "1024031",
+    "name": "Mayotte",
+    "region": "East Africa",
+    "flag": "🇾🇹"
+  },
+  {
+    "iso": "ZA",
+    "iso_a3": "ZAF",
+    "iso_numeric": "710",
+    "geonames_id": "953987",
+    "name": "South Africa",
+    "region": "Southern Africa",
+    "flag": "🇿🇦"
+  },
+  {
+    "iso": "ZM",
+    "iso_a3": "ZMB",
+    "iso_numeric": "894",
+    "geonames_id": "895949",
+    "name": "Zambia",
+    "region": "Southern Africa",
+    "flag": "🇿🇲"
+  },
+  {
+    "iso": "ZW",
+    "iso_a3": "ZWE",
+    "iso_numeric": "716",
+    "geonames_id": "878675",
+    "name": "Zimbabwe",
+    "region": "Southern Africa",
+    "flag": "🇿🇼"
+  },
+  {
+    "iso": "CS",
+    "iso_a3": "SCG",
+    "iso_numeric": "891",
+    "geonames_id": "8505033",
+    "name": "Serbia and Montenegro",
+    "region": "Western Europe",
+    "flag": ""
+  },
+  {
+    "iso": "AN",
+    "iso_a3": "ANT",
+    "iso_numeric": "530",
+    "geonames_id": "8505032",
+    "name": "Netherlands Antilles",
+    "region": "North America",
+    "flag": ""
+  }
+]
