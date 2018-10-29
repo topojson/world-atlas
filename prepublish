@@ -43,13 +43,14 @@ link_geonames() {
   echo
 
   TARGET_FILE="world/world$1.json" \
+  LOG_LEVEL=$2 \
   node scripts/link_geonames.js
 }
 
 world() {
   # fetch_shp $1 $2
   make_world_topo $1 $2 $3
-  link_geonames $1
+  link_geonames $1 $4
 }
 
 # rm -rvf world
@@ -57,6 +58,6 @@ world() {
 mkdir -p build
 mkdir -p world
 
-# world 110m map_units 1.0
-# world 50m map_units 0.25
-world 10m map_units 0.25
+world 110m map_units 1.0
+world 50m map_units 0.25
+world 10m map_units 0.25 DEBUG

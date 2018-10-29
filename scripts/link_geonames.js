@@ -2,7 +2,7 @@ const fs = require('fs-extra'); // promisified fs impl
 
 const DEFAULT_ENCODING = 'utf8';
 
-const { TARGET_FILE } = process.env;
+const { TARGET_FILE, LOG_LEVEL } = process.env;
 
 // load a JSON file from the local filesystem and return the relevant data object
 function loadJSON(fileName) {
@@ -19,6 +19,18 @@ function saveJSON(fileName, data) {
   return task;
 }
 
+function saveUpdatedTopology(data, updatedTopo) {
+  const countries = data.objects.countries;
+  const updatedCountries = {
+    ...countries,
+    geometries: updatedTopo
+  };
+
+  data.objects.countries = updatedCountries;
+
+  saveJSON(TARGET_FILE, data);
+}
+
 function summarizeTopo(properties) {
   return [
     properties.GEOUNIT,
@@ -30,6 +42,8 @@ function summarizeTopo(properties) {
 }
 
 function logCountryMatch(country, properties) {
+  if (!LOG_LEVEL) return;
+
   const flag = country.flag || '🌐';
   const metaName = country.name;
 
@@ -38,7 +52,29 @@ function logCountryMatch(country, properties) {
   console.log('\x1b[2m%s\x1b[0m', matchString);
 }
 
+function logSummaryStats(
+  topologies,
+  updatedTopologies,
+  countries,
+  countriesMatched
+) {
+  if (!LOG_LEVEL) return;
+
+  console.log('Number of topologies linked to geonames ids:');
+  console.log(`${updatedTopologies.length} / ${topologies.length}`);
+  console.log();
+  console.log('Countries without topologies:');
+  console.log(
+    countries
+      .filter(c => !countriesMatched.has(c))
+      .map(c => `${c.flag}  ${c.name}`)
+      .join('\n')
+  );
+}
+
 function logMatchError({ properties }, error) {
+  if (!LOG_LEVEL) return;
+
   const errorLine = `❔  ${summarizeTopo(properties)} - ${error}`;
 
   console.log('\x1b[1m%s\x1b[0m', errorLine);
@@ -131,21 +167,10 @@ loadJSON('meta/countries.json').then(countries => {
       }
     }
 
-    console.log();
-    console.log('Number of topologies linked to geonames ids:');
-    console.log(`${updatedTopologies.length} / ${topologies.length}`);
+    // sumarize stats
+    logSummaryStats(topologies, updatedTopologies, countries, countriesMatched);
 
     // update JSON file data
-    data.objects.countries.geometries = updatedTopologies;
-    saveJSON(TARGET_FILE, data);
-
-    console.log();
-    console.log('Countries without topologies:');
-    console.log(
-      countries
-        .filter(c => !countriesMatched.has(c))
-        .map(c => `${c.flag}  ${c.name}`)
-        .join('\n')
-    );
+    saveUpdatedTopology(data, updatedTopologies);
   });
 });
