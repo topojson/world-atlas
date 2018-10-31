@@ -1,63 +1,98 @@
 #!/bin/bash
 
-# alternative shape files with admin_0_sovereignty states separated out
-# https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_sovereignty.zip
-
 # alternative shape files with admin_0 map units separated out
 # https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_units.zip
 
-fetch_shp() {
+# admin 1 states / provinces / etc
+# https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip
+
+fetch_natural_earth_data() {
   echo
   echo "-----------------------------------------------------------------------"
   echo "Fetching $2 data from Natural Earth at 1:$1 scale"
   echo "-----------------------------------------------------------------------"
   echo
 
-  curl -z build/ne_$1_admin_0_$2.zip -o build/ne_$1_admin_0_$2.zip http://naciscdn.org/naturalearth/$1/cultural/ne_$1_admin_0_$2.zip
-  unzip -od build build/ne_$1_admin_0_$2.zip
-  chmod a-x build/ne_$1_admin_0_$2.*
+  curl -z build/ne_$1_$2.zip -o build/ne_$1_$2.zip http://naciscdn.org/naturalearth/$1/cultural/ne_$1_$2.zip
+  unzip -od build build/ne_$1_$2.zip
+  chmod a-x build/ne_$1_$2.*
 }
 
 make_world_topo() {
   echo "-----------------------------------------------------------------------"
-  echo "Building world topology -- world/world$1.json"
+  echo "Building world topology -- $1"
   echo "-----------------------------------------------------------------------"
   echo
 
-  # delete d.properties,
-  # d.properties = { name: d.properties.name },
-
   geo2topo -q 1e5 -n countries=<( \
-    shp2json -n build/ne_$1_admin_0_$2.shp \
+    shp2json -n build/ne_$2_$3.shp \
     | ndjson-map 'd.id = d.properties.iso_A2, d' \
     | geostitch -n) \
     | topomerge land=countries \
-    | toposimplify -S $3 \
-    > world/world$1.json
+    | toposimplify -S $4 \
+    > $1
 }
 
-link_geonames() {
+make_state_topo() {
   echo "-----------------------------------------------------------------------"
-  echo "Linking country metadata to geonames records -- world/world$1.json"
+  echo "Building state / province topology -- topo/countries"
   echo "-----------------------------------------------------------------------"
   echo
 
-  TARGET_FILE="world/world$1.json" \
+  geo2topo -q 1e5 -n adminRegions=<( \
+    shp2json -n build/ne_$2_$3.shp \
+    | ndjson-map 'd.id = d.properties.gn_id, p = d.properties, d.properties = { gu_a3: p.gu_a3, adm_a3: p.adm_a3 }, d' \
+    | geostitch -n) \
+    | toposimplify -S $4 \
+    > $1
+}
+
+link_country_geonames() {
+  echo "-----------------------------------------------------------------------"
+  echo "Linking country metadata to geonames records -- $1"
+  echo "-----------------------------------------------------------------------"
+  echo
+
+  TOPO_FILE="$1" \
+  COUNTRY_META="meta/countries.json" \
   LOG_LEVEL=$2 \
-  node scripts/link_geonames.js
+  node scripts/link_country_geonames.js
+}
+
+create_country_topologies() {
+  echo "-----------------------------------------------------------------------"
+  echo "Breaking admin region topologies into country-specific files"
+  echo "-----------------------------------------------------------------------"
+  echo
+
+  TOPO_FILE="$1" \
+  COUNTRY_META="meta/countries.json" \
+  LOG_LEVEL=$2 \
+  node scripts/split_country_topologies.js
 }
 
 world() {
-  # fetch_shp $1 $2
-  make_world_topo $1 $2 $3
-  link_geonames $1 $4
+  local outfile=topo/world/$1.json
+  # fetch_natural_earth_data $1 $2
+  make_world_topo $outfile $1 $2 $3
+  link_country_geonames $outfile $4
+}
+
+states() {
+  local outfile=topo/countries/all_$1.json
+  # fetch_natural_earth_data $1 $2
+  # make_state_topo $outfile $1 $2 $3
+  create_country_topologies $outfile $4
 }
 
 # rm -rvf world
 
 mkdir -p build
-mkdir -p world
+mkdir -p topo/world
+mkdir -p topo/countries
 
-world 110m map_units 1.0
-world 50m map_units 0.25
-world 10m map_units 0.25 DEBUG
+# world 110m admin_0_map_units 1.0 BUILD
+# world 50m admin_0_map_units 0.25 BUILD
+# world 10m admin_0_map_units 0.25 DEBUG
+
+states 10m admin_1_states_provinces 0.25 DEBUG
