@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"3319178","properties":{"name":"Monaco","iso":"MCO","level":1}}]}},"arcs":[[[99999,49999],[-99999,-49999],[57894,99999],[42105,-50000]]],"bbox":[7.367473674736743,43.72288830205261,7.435874358743604,43.76341415652979],"transform":{"scale":[6.840136802054071e-7,4.0526259739778553e-7],"translate":[7.367473674736743,43.72288830205261]}}

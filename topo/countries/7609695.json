@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"-99","properties":{"name":"Sint Maarten","iso":"SXM","level":0}}]}},"arcs":[[[0,99999],[99999,-67999],[-16000,-32000],[-71999,40000],[-12000,59999]]],"bbox":[-63.10683106831068,18.019365099898167,-63.01683016830168,18.061579531645236],"transform":{"scale":[9.000180002700257e-7,4.221485389560858e-7],"translate":[-63.10683106831068,18.019365099898167]}}

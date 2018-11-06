@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"0","properties":{"name":"Gibraltar","iso":"GIB","level":0}}]}},"arcs":[[[0,0],[99999,0],[-99999,0]]],"bbox":[-5.3586535865358655,36.14117636027929,-5.3370533705337095,36.14117636027929],"transform":{"scale":[2.1600432006476067e-7,1],"translate":[-5.3586535865358655,36.14117636027929]}}

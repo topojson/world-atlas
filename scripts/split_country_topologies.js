@@ -15,29 +15,28 @@ const adminRegions = topoClient.feature(
   topology.objects.adminRegions
 );
 
-const { type, features } = adminRegions;
+const { type, features: allFeatures } = adminRegions;
 
-const [firstFeature] = features;
-
-console.log(Object.keys(firstFeature.properties));
-
-// return;
-
+// for every country, finding any admin regions that belong to it and
+// build a dedicated topology file named with the appropriate geonames id
 Promise.all(
   countries.map(country => {
     const { iso_a3, geonames_id } = country;
 
     const filename = `topo/countries/${geonames_id}.json`;
-    const countryFeatures = features.filter(f => f.properties.gu_a3 === iso_a3);
-    const countryGeo = {
+    const belongsToCountry = f => f.properties.iso === iso_a3;
+
+    const features = allFeatures.filter(belongsToCountry);
+    const adminRegions = {
       type,
-      features: countryFeatures
+      features
     };
 
-    const countryTopo = topoServer.topology(countryGeo, 1e5);
+    const countryTopo = topoServer.topology({ adminRegions }, 1e5);
 
-    console.log('writing', filename, iso_a3, countryFeatures.length);
+    if (LOG_LEVEL === 'DEBUG')
+      console.log('writing', filename, iso_a3, features.length);
 
     return jsonfile.writeFile(filename, countryTopo);
   })
-).then(() => console.log('all done'));
+).then(items => console.log(items.length, 'country topologies written'));

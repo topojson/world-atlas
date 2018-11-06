@@ -41,7 +41,7 @@ make_state_topo() {
 
   geo2topo -q 1e5 -n adminRegions=<( \
     shp2json -n build/ne_$2_$3.shp \
-    | ndjson-map 'd.id = d.properties.gn_id, p = d.properties, d.properties = { gu_a3: p.gu_a3, adm_a3: p.adm_a3 }, d' \
+    | ndjson-map 'p = "properties", dp = d[p], d.id = ""+dp.gn_id, d[p] = { name: dp.name, iso: dp.adm0_a3, level: dp.gn_level }, d' \
     | geostitch -n) \
     | toposimplify -S $4 \
     > $1
@@ -72,27 +72,27 @@ create_country_topologies() {
 }
 
 world() {
-  local outfile=topo/world/$1.json
-  # fetch_natural_earth_data $1 $2
-  make_world_topo $outfile $1 $2 $3
-  link_country_geonames $outfile $4
+  local topofile=topo/world/$1.json
+  fetch_natural_earth_data $1 $2
+  make_world_topo $topofile $1 $2 $3
+  link_country_geonames $topofile $4
 }
 
 states() {
-  local outfile=topo/countries/all_$1.json
-  # fetch_natural_earth_data $1 $2
-  # make_state_topo $outfile $1 $2 $3
-  create_country_topologies $outfile $4
+  local topofile=topo/countries/all_$1.json
+  fetch_natural_earth_data $1 $2
+  make_state_topo $topofile $1 $2 $3
+  create_country_topologies $topofile $4
 }
 
-# rm -rvf world
+rm -rvf topo
 
 mkdir -p build
 mkdir -p topo/world
 mkdir -p topo/countries
 
-# world 110m admin_0_map_units 1.0 BUILD
-# world 50m admin_0_map_units 0.25 BUILD
-# world 10m admin_0_map_units 0.25 DEBUG
+world 110m admin_0_map_units 1.0 BUILD
+world 50m admin_0_map_units 0.25 BUILD
+world 10m admin_0_map_units 0.25 DEBUG
 
 states 10m admin_1_states_provinces 0.25 DEBUG

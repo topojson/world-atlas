@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"3578419","properties":{"name":"St. Martin","iso":"MAF","level":2}}]}},"arcs":[[[99999,0],[-99999,32075],[40000,54717],[59999,13207],[0,-99999]]],"bbox":[-63.10683106831068,18.032873718057218,-63.01683016830168,18.122368313361008],"transform":{"scale":[9.000180002700257e-7,8.949549025869304e-7],"translate":[-63.10683106831068,18.032873718057218]}}

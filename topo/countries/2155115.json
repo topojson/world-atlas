@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"0","properties":{"name":"Norfolk Island","iso":"NFK","level":0}}]}},"arcs":[[[94117,70731],[5882,-60975],[-99999,-9756],[0,99999],[94117,-29268]]],"bbox":[167.92547925479255,-29.066612070780884,167.98667986679868,-28.9973804027157],"transform":{"scale":[6.120122401837254e-7,6.923236038878955e-7],"translate":[167.92547925479255,-29.066612070780884]}}

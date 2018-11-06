@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"Polygon","arcs":[[0]],"id":"-99","properties":{"name":"Saint BarthÃ©lemy","iso":"BLM","level":0}}]}},"arcs":[[[26316,0],[-26316,99999],[99999,-24000],[-73683,-75999]]],"bbox":[-62.85842858428583,17.88259034103767,-62.790027900279,17.924804772784725],"transform":{"scale":[6.840136802051229e-7,4.221485389559437e-7],"translate":[-62.85842858428583,17.88259034103767]}}

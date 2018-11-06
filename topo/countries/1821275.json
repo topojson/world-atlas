@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"type":{},"features":{}},"arcs":[]}
+{"type":"Topology","objects":{"adminRegions":{"type":"GeometryCollection","geometries":[{"type":"MultiPolygon","arcs":[[[0]],[[1]]],"id":"0","properties":{"name":"Macau","iso":"MAC","level":0}}]}},"arcs":[[[50000,59649],[49999,-31579],[-68749,-28070],[-18750,57894],[37500,1755]],[[0,99999],[0,0]]],"bbox":[113.52893528935289,22.105722093014293,113.58653586535866,22.20197099739761],"transform":{"scale":[5.760115201728847e-7,9.624986688198471e-7],"translate":[113.52893528935289,22.105722093014293]}}
