@@ -92,7 +92,7 @@ mkdir -p topo/world
 mkdir -p topo/countries
 
 world 110m admin_0_map_units 1.0 BUILD
-world 50m admin_0_map_units 0.25 BUILD
+world 50m admin_0_map_units 0.35 BUILD
 world 10m admin_0_map_units 0.25 DEBUG
 
 states 10m admin_1_states_provinces 0.25 DEBUG
