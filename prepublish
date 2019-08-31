@@ -23,7 +23,7 @@ countries() {
   countries_shp $1
   geo2topo -q 1e5 -n countries=<( \
       shp2json --encoding utf8 -n build/ne_$1_admin_0_countries.shp \
-        | ndjson-map 'i = d.properties.ISO_N3, d.id = i === "-99" ? undefined : i, d.properties = {name: d.properties.NAME}, d' \
+        | ndjson-map 'i = d.properties.ISO_N3, d.id = i === "-99" ? (d.properties.SOV_A3 === "NOR" ? "578" : undefined) : i, d.properties = {name: d.properties.NAME}, d' \
         | geostitch -n) \
     | topomerge land=countries \
     > countries-$1.json
