@@ -2,7 +2,7 @@
   "name": "world-atlas",
   "version": "1.1.4",
   "description": "Pre-built TopoJSON from Natural Earth.",
-  "license": "BSD-3-Clause",
+  "license": "ISC",
   "keywords": [
     "topojson",
     "geojson",
@@ -16,17 +16,21 @@
     "type": "git",
     "url": "https://github.com/topojson/world-atlas.git"
   },
+  "files": [
+    "*-10m.json",
+    "*-50m.json",
+    "*-110m.json"
+  ],
   "scripts": {
-    "prepare": "bash prepublish",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp -v ../world-atlas/world/110m.json world-110m.v1.json && cp -v ../world-atlas/world/110m.tsv world-110m.v1.tsv && cp -v ../world-atlas/world/50m.json world-50m.v1.json && cp -v ../world-atlas/world/50m.tsv world-50m.v1.tsv && git add world-110m.v1.json world-110m.v1.tsv world-50m.v1.json world-50m.v1.tsv && git commit -m \"world-atlas ${npm_package_version}\" && git push && cd -"
+    "prepublishOnly": "bash prepublish",
+    "postpublish": "git push && git push --tags"
   },
   "devDependencies": {
-    "d3-dsv": "^1.0.3",
     "d3-geo-projection": "^2.0.1",
     "ndjson-cli": "^0.3.0",
     "shapefile": "^0.6.1",
-    "topojson-server": "^3.0.0",
     "topojson-client": "^3.0.0",
+    "topojson-server": "^3.0.0",
     "topojson-simplify": "^3.0.0"
   }
 }
